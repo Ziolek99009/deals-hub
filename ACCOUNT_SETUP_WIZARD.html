@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto-Saving Account Setup Wizard (Saves Every Keystroke Automatically!)</title>
+<style>
+  :root {
+    --bg: #0b1120;
+    --card: #172033;
+    --border: #2a364f;
+    --text: #f8fafc;
+    --muted: #94a3b8;
+    --green: #10b981;
+    --blue: #3b82f6;
+    --orange: #f97316;
+    --amber: #f59e0b;
+    --purple: #8b5cf6;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+    padding: 0 0 60px;
+  }
+  .autosave-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #064e3b;
+    border-bottom: 2px solid var(--green);
+    color: #a7f3d0;
+    padding: 10px 18px;
+    font-size: 13px;
+    font-weight: 800;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .container { max-width: 900px; margin: 22px auto 0; padding: 0 16px; }
+  .header-box {
+    background: linear-gradient(135deg, #064e3b 0%, #172033 100%);
+    border: 1px solid var(--green);
+    border-radius: 16px;
+    padding: 22px;
+    margin-bottom: 20px;
+  }
+  .header-box h1 { font-size: 22px; margin-bottom: 6px; }
+  .step-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  .step-card.done-ready { border-left: 5px solid var(--green); }
+  .step-card.instant { border-left: 5px solid var(--amber); }
+  .step-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .badge {
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 99px;
+    text-transform: uppercase;
+  }
+  .b-green { background: rgba(16,185,129,0.2); color: #34d399; }
+  .b-amber { background: rgba(245,158,11,0.2); color: #fcd34d; }
+  h2 { font-size: 18px; margin-bottom: 6px; }
+  .ext-link {
+    display: inline-block;
+    background: var(--blue);
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 12.5px;
+    padding: 7px 12px;
+    border-radius: 8px;
+    margin: 4px 6px 8px 0;
+  }
+  .input-row {
+    background: #0b1120;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px;
+  }
+  .input-row label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: #93c5fd;
+    margin-bottom: 5px;
+  }
+  input, textarea {
+    width: 100%;
+    background: #172033;
+    border: 1px solid #334155;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 13.5px;
+    font-family: monospace;
+  }
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--green);
+  }
+  .save-bar {
+    background: #040814;
+    border: 2px solid var(--green);
+    border-radius: 16px;
+    padding: 22px;
+    text-align: center;
+    margin-top: 24px;
+  }
+  .btn-big {
+    background: var(--green);
+    color: #022c22;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 900;
+    cursor: pointer;
+    margin: 8px 6px 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="autosave-bar">
+  <span id="autoSaveStatus">🟢 AUTO-SAVE ACTIVE: Every letter or link you paste is saved automatically in real time!</span>
+  <span id="lastSavedClock" style="color:#34d399;">✓ Memory Synced</span>
+</div>
+
+<div class="container">
+  <div class="header-box">
+    <h1>⚡ Auto-Saving Account &amp; Channel Setup Wizard (4 Channels + All Affiliates)</h1>
+    <p style="font-size:14px; color:#d1fae5;">
+      Type or paste any link below — <strong>it auto-saves immediately as you type!</strong> Even if you close the window and come back later, everything you typed stays right here.
+    </p>
+  </div>
+
+  <!-- STEP 1: AMAZON + ALIEXPRESS + 4 YOUTUBE CHANNELS -->
+  <div class="step-card done-ready">
+    <div class="step-top">
+      <span class="badge b-green">✓ Step 1: Your Amazon, AliExpress &amp; 4 YouTube Channels (Auto-Saves As You Type)</span>
+    </div>
+    <h2>1. Paste Your AliExpress Link, Amazon Tag &amp; 4 YouTube Channels</h2>
+    <div class="input-row" style="margin-bottom:10px;">
+      <label>Your 1 Single AliExpress Affiliate Link:</label>
+      <input type="text" id="aliLink" oninput="autoSaveAll()" value="https://s.click.aliexpress.com/e/_dExampleLink">
+    </div>
+    <div class="input-row" style="margin-bottom:10px;">
+      <label>Your Amazon Associate Tag (e.g. yourname-20):</label>
+      <input type="text" id="amzTag" oninput="autoSaveAll()" value="yourtag-20">
+    </div>
+    <div class="input-row">
+      <label>Your 4 YouTube Channel URLs (One per line):</label>
+      <textarea id="ytChans" rows="4" oninput="autoSaveAll()">https://www.youtube.com/@YourChannel1
+https://www.youtube.com/@YourChannel2
+https://www.youtube.com/@YourChannel3
+https://www.youtube.com/@YourChannel4</textarea>
+    </div>
+  </div>
+
+  <!-- STEP 2: EBAY PARTNER NETWORK -->
+  <div class="step-card instant">
+    <div class="step-top">
+      <span class="badge b-amber">⚡ Step 2: eBay Partner Network (10-Digit Campaign ID)</span>
+    </div>
+    <h2>2. Your 10-Digit eBay Campaign ID (Starts with 533...)</h2>
+    <a class="ext-link" href="https://partnernetwork.ebay.com/" target="_blank" rel="noopener">🔗 Open partnernetwork.ebay.com →</a>
+    <div class="input-row">
+      <label>Paste Your 10-Digit eBay Campaign ID:</label>
+      <input type="text" id="ebayId" oninput="autoSaveAll()" value="5339000000">
+    </div>
+  </div>
+
+  <!-- STEP 3: PCLOUD + INSTANT PARTNERS -->
+  <div class="step-card instant">
+    <div class="step-top">
+      <span class="badge b-amber">⚡ Step 3: Your pCloud Affiliate + Instant-Approval Partners</span>
+    </div>
+    <h2>3. Paste Your pCloud &amp; Bonus Partner Links (Auto-Saves Instantly!)</h2>
+    <div style="margin-bottom:8px;">
+      <a class="ext-link" href="https://www.pcloud.com/affiliate/" target="_blank" rel="noopener">☁️ pCloud Dashboard</a>
+      <a class="ext-link" href="https://whop.com/affiliates" target="_blank" rel="noopener">⚡ Whop AI (Instant)</a>
+      <a class="ext-link" href="https://www.travelpayouts.com/" target="_blank" rel="noopener">⚡ Travelpayouts (Instant)</a>
+      <a class="ext-link" href="https://www.instant-gaming.com/en/affiliate-program/" target="_blank" rel="noopener">🎮 Instant-Gaming (Instant)</a>
+      <a class="ext-link" href="https://www.tradingview.com/share-your-love/" target="_blank" rel="noopener">📈 TradingView (Instant)</a>
+    </div>
+
+    <div class="input-row" style="display:grid; gap:8px;">
+      <label>Slot 1 — Your pCloud Affiliate Link (Or NordVPN Link):</label>
+      <input type="text" id="nordLink" oninput="autoSaveAll()" value="https://www.pcloud.com/?ref=your-pcloud-id">
+      <label>Slot 2 — Whop Deal Soldier &amp; AI Tools Link (30% Monthly — Locked In!):</label>
+      <input type="text" id="whopLink" oninput="autoSaveAll()" value="https://whop.com/deal-soldier?a=matiziolek">
+      <label>Slot 3 — Travelpayouts Flight &amp; Hotel Link:</label>
+      <input type="text" id="travelLink" oninput="autoSaveAll()" value="https://www.travelpayouts.com/?marker=your-id">
+      <label>Slot 4 — Instant-Gaming / PC Game Keys Link (?igr=your-username):</label>
+      <input type="text" id="gameLink" oninput="autoSaveAll()" value="https://www.instant-gaming.com/?igr=your-username">
+      <label>Slot 5 — TradingView Referral Link (Locked In!):</label>
+      <input type="text" id="cryptoLink" oninput="autoSaveAll()" value="https://www.tradingview.com/pricing/?share_your_love=matiziolek1993">
+    </div>
+  </div>
+
+  <!-- STEP 4: GITHUB URL -->
+  <div class="step-card done-ready">
+    <div class="step-top">
+      <span class="badge b-green">✓ Step 4: Your Free GitHub Pages Link</span>
+    </div>
+    <h2>4. Your GitHub Pages URL (https://YOUR-USERNAME.github.io/deals-hub)</h2>
+    <div class="input-row">
+      <label>Replace "your-username" with your GitHub username:</label>
+      <input type="text" id="siteUrl" oninput="autoSaveAll()" value="https://your-username.github.io/deals-hub">
+    </div>
+  </div>
+
+  <div class="save-bar">
+    <h3>✅ Everything Above Is Already Auto-Saved!</h3>
+    <p style="font-size:13.5px; color:#cbd5e1;">Click the purple button below to scan your 4 channels &amp; build all your webpages right from this screen (or click green to download a copy of <code>MY_SETTINGS.json</code>):</p>
+    <button class="btn-big" style="background:#8b5cf6;color:white;" id="buildBtn" onclick="triggerBuildNow()">🚀 Scan My 4 Channels &amp; Build My Website Now!</button>
+    <button class="btn-big" onclick="exportConfig()">💾 Download Copy of MY_SETTINGS.json</button>
+    <div id="buildStatus" style="margin-top:12px;font-weight:800;color:#34d399;display:none;"></div>
+  </div>
+</div>
+
+<script>
+function triggerBuildNow() {
+  autoSaveAll();
+  const btn = document.getElementById('buildBtn');
+  const st = document.getElementById('buildStatus');
+  btn.textContent = "⏳ Scanning 4 Channels & Building Pages (Takes ~20s)...";
+  st.style.display = "block";
+  st.textContent = "⏳ Working... Check your black Python window for live progress!";
+  fetch('/api/build', {method: 'POST'})
+    .then(r => r.json())
+    .then(() => {
+      btn.textContent = "✅ Build Complete! Click to Rebuild Anytime";
+      st.innerHTML = "✅ All Pages Built! <a href='site_output/index.html' target='_blank' style='color:#fcd34d;text-decoration:underline;'>Click Here to Open Your New Website →</a>";
+    })
+    .catch(() => {
+      btn.textContent = "🚀 Scan My 4 Channels & Build My Website Now!";
+      st.textContent = "ℹ️ Make sure CLICK_ME_TO_START.bat Option 1 is running in the background!";
+    });
+}
+const STORAGE_KEY = "AUTOPILOT_AFFILIATE_SAVED_SETTINGS_V1";
+
+function buildPayload() {
+  const lines = document.getElementById('ytChans').value.split('\n').map(s => s.trim()).filter(Boolean);
+  const channels = lines.map((url, idx) => ({
+    id: 'ch' + (idx + 1),
+    name: 'Channel ' + (idx + 1),
+    url: url
+  }));
+
+  return {
+    SITE_URL: document.getElementById('siteUrl').value.trim(),
+    ENABLE_AMAZON_BUTTON_ON_PAGES: true,
+    AMAZON_ASSOCIATE_TAG: document.getElementById('amzTag').value.trim(),
+    EBAY_CAMPID: document.getElementById('ebayId').value.trim(),
+    ALIEXPRESS_ONE_LINK: document.getElementById('aliLink').value.trim(),
+    BONUS_PARTNER_LINKS: {
+      pcloud_or_vpn_link: document.getElementById('nordLink').value.trim(),
+      whop_ai_link: document.getElementById('whopLink').value.trim(),
+      travelpayouts_link: document.getElementById('travelLink').value.trim(),
+      instant_gaming_link: document.getElementById('gameLink').value.trim(),
+      ledger_crypto_link: document.getElementById('cryptoLink').value.trim()
+    },
+    YOUTUBE_CHANNELS: channels
+  };
+}
+
+function autoSaveAll() {
+  const cfg = buildPayload();
+  // 1. Instant Browser Auto-Save (localStorage)
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(cfg));
+  } catch (e) {}
+
+  // 2. Real-Time Disk Auto-Save (when running via auto_save_app.py / CLICK_ME_TO_START.bat)
+  fetch('/api/autosave', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(cfg)
+  }).catch(() => {});
+
+  const now = new Date().toLocaleTimeString();
+  document.getElementById('lastSavedClock').textContent = '✅ Auto-Saved at ' + now;
+}
+
+function restoreSavedSettings() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return;
+    const cfg = JSON.parse(raw);
+    if (cfg.SITE_URL) document.getElementById('siteUrl').value = cfg.SITE_URL;
+    if (cfg.AMAZON_ASSOCIATE_TAG) document.getElementById('amzTag').value = cfg.AMAZON_ASSOCIATE_TAG;
+    if (cfg.EBAY_CAMPID) document.getElementById('ebayId').value = cfg.EBAY_CAMPID;
+    if (cfg.ALIEXPRESS_ONE_LINK) document.getElementById('aliLink').value = cfg.ALIEXPRESS_ONE_LINK;
+    if (cfg.BONUS_PARTNER_LINKS) {
+      if (cfg.BONUS_PARTNER_LINKS.pcloud_or_vpn_link) document.getElementById('nordLink').value = cfg.BONUS_PARTNER_LINKS.pcloud_or_vpn_link;
+      if (cfg.BONUS_PARTNER_LINKS.whop_ai_link) document.getElementById('whopLink').value = cfg.BONUS_PARTNER_LINKS.whop_ai_link;
+      if (cfg.BONUS_PARTNER_LINKS.travelpayouts_link) document.getElementById('travelLink').value = cfg.BONUS_PARTNER_LINKS.travelpayouts_link;
+      if (cfg.BONUS_PARTNER_LINKS.instant_gaming_link) document.getElementById('gameLink').value = cfg.BONUS_PARTNER_LINKS.instant_gaming_link;
+      if (cfg.BONUS_PARTNER_LINKS.ledger_crypto_link) document.getElementById('cryptoLink').value = cfg.BONUS_PARTNER_LINKS.ledger_crypto_link;
+    }
+    if (Array.isArray(cfg.YOUTUBE_CHANNELS) && cfg.YOUTUBE_CHANNELS.length > 0) {
+      document.getElementById('ytChans').value = cfg.YOUTUBE_CHANNELS.map(c => c.url).join('\n');
+    }
+    document.getElementById('lastSavedClock').textContent = '✅ Restored Your Saved Settings';
+  } catch (e) {}
+}
+
+function exportConfig() {
+  const cfg = buildPayload();
+  const blob = new Blob([JSON.stringify(cfg, null, 2)], {type: 'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'MY_SETTINGS.json';
+  a.click();
+}
+
+restoreSavedSettings();
+</script>
+</body>
+</html>
