@@ -1,37 +1,36 @@
 {
-  "SITE_URL": "https://your-username.github.io/deals-hub",
+  "SITE_URL": "https://global-tech-reviews.github.io/deals-hub",
   "ENABLE_AMAZON_BUTTON_ON_PAGES": true,
-  "AMAZON_ASSOCIATE_TAG": "yourtag-20",
-  "EBAY_CAMPID": "5339000000",
-  "ALIEXPRESS_ONE_LINK": "https://s.click.aliexpress.com/e/_dExampleLink",
+  "AMAZON_ASSOCIATE_TAG": "ziolek-20",
+  "EBAY_CAMPID": "5339136480",
+  "ALIEXPRESS_ONE_LINK": "https://s.click.aliexpress.com/e/_c3XFkIk1",
   "BONUS_PARTNER_LINKS": {
-    "pcloud_link": "https://www.pcloud.com/?ref=your-pcloud-id",
-    "nordvpn_link": "https://nordvpn.com/special/?ref=twoj-nick",
+    "pcloud_or_vpn_link": "https://partner.pcloud.com/r/158156",
     "whop_ai_link": "https://whop.com/deal-soldier?a=matiziolek",
-    "travelpayouts_link": "https://www.travelpayouts.com/?marker=your-id",
-    "instant_gaming_link": "https://www.instant-gaming.com/?igr=your-username",
+    "travelpayouts_link": "https://klook.tpo.lu/4aMl8BIT",
+    "instant_gaming_link": "https://www.instant-gaming.com/?igr=gamer-a3e0a28",
     "ledger_crypto_link": "https://www.tradingview.com/pricing/?share_your_love=matiziolek1993"
   },
   "YOUTUBE_CHANNELS": [
     {
       "id": "ch1",
-      "name": "Channel 1 • Smart Home & Kitchen",
-      "url": "https://www.youtube.com/@YourChannel1"
+      "name": "Channel 1",
+      "url": "https://www.youtube.com/channel/UCdcte1tNyB_F6a4P9S1V7dw"
     },
     {
       "id": "ch2",
-      "name": "Channel 2 • Auto & Car Gadgets",
-      "url": "https://www.youtube.com/@YourChannel2"
+      "name": "Channel 2",
+      "url": "https://www.youtube.com/channel/UCJuQdlTl_DE_7E4TbgcXUtQ/"
     },
     {
       "id": "ch3",
-      "name": "Channel 3 • Daily Tech & EDC",
-      "url": "https://www.youtube.com/@YourChannel3"
+      "name": "Channel 3",
+      "url": "https://www.youtube.com/channel/UCizMutB0xtYKPsXGUQDfy-Q/"
     },
     {
       "id": "ch4",
-      "name": "Channel 4 • Home Office & Tools",
-      "url": "https://www.youtube.com/@YourChannel4"
+      "name": "Channel 4",
+      "url": "https://www.youtube.com/channel/UC8dMCVIMDD--MPY1Bwe_OKQ/"
     }
   ]
 }
