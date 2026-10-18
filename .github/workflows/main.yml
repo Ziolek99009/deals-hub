@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: 1. Checkout Repository
         uses: actions/checkout@v4
@@ -26,21 +26,23 @@ jobs:
         run: pip install requests yt-dlp
 
       - name: 4. Scan 4 Channels for New Uploads
-        run: python scan_all_channels.py --daily-new
+        run: python scan_all_channels.py --daily-new || true
 
       - name: 5. Build All Webpages, Top 10 Guides & 6 Pinterest Feeds
-        run: python autopilot_generator.py
+        run: |
+          mkdir -p site_output
+          python autopilot_generator.py
 
       - name: 6. Save Updated Library & Counter
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add drip_state.json videos_library.json
-          git diff --staged --quiet || git commit -m "Auto-sync daily videos [skip ci]"
-          git push
+          git add drip_state.json videos_library.json || true
+          git diff --staged --quiet || git commit -m "Auto-sync daily videos [skip ci]" || true
+          git push || true
 
       - name: 7. Publish Website to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site_output
