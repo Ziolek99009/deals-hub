@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Standalone Comparison Pages + 20k Video Pages Architecture</title>
+<style>
+  :root {
+    --bg: #0b1120;
+    --card: #172033;
+    --border: #2a364f;
+    --text: #f8fafc;
+    --muted: #94a3b8;
+    --green: #10b981;
+    --blue: #3b82f6;
+    --orange: #f97316;
+    --red: #ef4444;
+    --purple: #8b5cf6;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    padding-bottom: 50px;
+  }
+  .top-banner {
+    background: #064e3b;
+    color: #a7f3d0;
+    font-size: 12px;
+    padding: 9px 18px;
+    text-align: center;
+    border-bottom: 1px solid #047857;
+  }
+  .nav-bar {
+    background: #040814;
+    border-bottom: 1px solid var(--border);
+    padding: 12px 18px;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .tab-btn {
+    background: var(--card);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 9px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .tab-btn.active {
+    background: var(--purple);
+    border-color: white;
+    color: white;
+  }
+  .container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 20px 18px;
+  }
+  .explain-box {
+    background: linear-gradient(135deg, #1e1b4b 0%, #172033 100%);
+    border: 1px solid #8b5cf6;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .explain-box h1 {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+  .standalone-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 18px;
+  }
+  @media (max-width: 600px) {
+    .standalone-grid { grid-template-columns: 1fr; }
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 11.5px;
+    gap: 6px;
+  }
+  .pill {
+    background: rgba(16, 185, 129, 0.18);
+    color: #34d399;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-weight: 700;
+  }
+  .pill-purple {
+    background: rgba(139, 92, 246, 0.22);
+    color: #c4b5fd;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-weight: 700;
+  }
+  .card h3 {
+    font-size: 17px;
+    margin-bottom: 6px;
+    color: #f8fafc;
+  }
+  .kw-bar {
+    font-size: 11.5px;
+    color: #93c5fd;
+    margin-bottom: 10px;
+    font-family: monospace;
+  }
+  .comp-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #0b1120;
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 12px;
+    margin: 10px 0 12px;
+  }
+  .comp-table th {
+    background: #1e293b;
+    color: #93c5fd;
+    text-align: left;
+    padding: 8px;
+  }
+  .comp-table td {
+    padding: 7px 8px;
+    border-top: 1px solid #1e293b;
+  }
+  .verdict-box {
+    background: rgba(16, 185, 129, 0.1);
+    border-left: 3px solid var(--green);
+    padding: 8px 10px;
+    font-size: 12.5px;
+    color: #d1fae5;
+    margin-bottom: 12px;
+  }
+  .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+    margin-bottom: 6px;
+  }
+  .btn-green { background: var(--green); color: #022c22; }
+  .btn-purple { background: var(--purple); color: white; }
+  .btn-yt { background: var(--red); color: white; }
+  .btn-ebay { background: var(--blue); color: white; }
+  .btn-ali { background: var(--orange); color: white; }
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+
+<div class="top-banner">
+  <strong>✓ NOT JUST AN ADDON BELOW VIDEOS:</strong> VPNs, Hosting, AI Tools, Crypto, Travel &amp; Bestsellers Have Their Own Full Standalone "X vs Y" Comparison Pages in <code>/compare/*.html</code>!
+</div>
+
+<div class="nav-bar">
+  <div style="font-size:13px; font-weight:700; color:#c4b5fd;">● DUAL PAGE ARCHITECTURE</div>
+  <div class="nav-tabs">
+    <button class="tab-btn active" id="t-compare" onclick="switchTab('compare')">1. Standalone "X vs Y" Comparison Pages (VPN, Hosting, AI, Crypto, Travel, Ali/eBay)</button>
+    <button class="tab-btn" id="t-videos" onclick="switchTab('videos')">2. Your 20,000 Video Review Pages (Links Into the Comparison Pages!)</button>
+    <button class="tab-btn" id="t-games" onclick="switchTab('games')">3. Live PC Game Deal Pages (Steam API)</button>
+  </div>
+</div>
+
+<div class="container">
+  <!-- TAB 1: FULL STANDALONE COMPARISON PAGES -->
+  <div id="sec-compare">
+    <div class="explain-box">
+      <h1>What Is On the Standalone VPN, Hosting, AI, Crypto, Travel &amp; Bestseller Pages?</h1>
+      <p style="font-size:13.5px; color:#cbd5e1;">
+        Instead of just being a small button under your videos, the script creates <strong>dedicated Head-to-Head Comparison Pages (<code>/compare/*.html</code>)</strong> with real side-by-side spec tables. These pages are listed in your <code>sitemap.xml</code> (for Google/Bing) and <code>feed.xml</code> (for automatic Pinterest pinning), AND your 20,000 video pages link directly to them!
+      </p>
+    </div>
+    <div class="standalone-grid" id="compareGrid"></div>
+  </div>
+
+  <!-- TAB 2: 20K VIDEO PAGES -->
+  <div class="hidden" id="sec-videos">
+    <div class="standalone-grid" id="videoGrid"></div>
+  </div>
+
+  <!-- TAB 3: LIVE PC GAME DEALS -->
+  <div class="hidden" id="sec-games">
+    <div class="standalone-grid" id="gamesGrid"></div>
+  </div>
+</div>
+
+<script>
+const COMPARE_PAGES = [
+  {
+    "slug": "nordvpn-vs-surfshark-speed-and-price-comparison",
+    "category": "VPN & Security Standalone Page",
+    "seo_title": "NordVPN vs Surfshark (2026): Speed Test, Streaming & 2-Year Price Comparison",
+    "search_keywords": "nordvpn vs surfshark, cheapest vpn for streaming, vpn speed test 2026",
+    "payout_info": "Pays $40\u2013$100 per signup (Impact.com)",
+    "winner_name": "NordVPN Threat Protection Pro",
+    "runner_up_name": "Surfshark One (Unlimited Devices)",
+    "table_rows": [
+      [
+        "Average WireGuard Speed",
+        "940 Mbps (NordLynx)",
+        "890 Mbps (WireGuard)"
+      ],
+      [
+        "Devices Allowed",
+        "10 Simultaneous Devices",
+        "Unlimited Devices"
+      ],
+      [
+        "Streaming & Smart TV Unblock",
+        "\u2713 Netflix, BBC, Prime, Disney+",
+        "\u2713 All Major Platforms"
+      ],
+      [
+        "2-Year Promo Price",
+        "$3.09 / month (-72% Off)",
+        "$1.99 / month (-82% Off)"
+      ],
+      [
+        "Malware & Ad Blocker",
+        "Built-in Threat Protection Pro",
+        "CleanWeb 2.0 Included"
+      ]
+    ],
+    "verdict": "Choose NordVPN if you want the fastest raw download speeds and built-in anti-malware scanning. Choose Surfshark if you want to share one account with your entire household on unlimited devices.",
+    "primary_btn_text": "Claim NordVPN 72% Discount + 3 Months Free \u2192",
+    "primary_url": "https://nordvpn.com/special/",
+    "secondary_btn_text": "Claim Surfshark $1.99/mo Unlimited Devices Deal \u2192",
+    "secondary_url": "https://surfshark.com/deals",
+    "pin_image": "https://i.ytimg.com/vi/IBVmenOroPs/hqdefault.jpg"
+  },
+  {
+    "slug": "hostinger-vs-bluehost-cloud-hosting-cost-calculator",
+    "category": "Web Hosting Standalone Page",
+    "seo_title": "Hostinger vs Bluehost (2026): Real 3-Year Cost & TTFB Speed Comparison",
+    "search_keywords": "hostinger vs bluehost, cheapest wordpress hosting 2026, hostinger coupon",
+    "payout_info": "Pays $60\u2013$150 per sale (Impact / Direct)",
+    "winner_name": "Hostinger Business + AI Website Builder",
+    "runner_up_name": "Standard Shared Hosting",
+    "table_rows": [
+      [
+        "Server Technology",
+        "LiteSpeed Enterprise + NVMe SSD",
+        "Standard Apache Server"
+      ],
+      [
+        "Free Domain & SSL",
+        "\u2713 Free .com Domain + Unlimited SSL",
+        "\u2713 1st Year Only"
+      ],
+      [
+        "Built-in AI Site Builder",
+        "\u2713 Included Free (No Coding)",
+        "Paid Add-on"
+      ],
+      [
+        "Global Data Centers",
+        "USA, UK, Germany, France, Lithuania, India, Brazil",
+        "USA Only"
+      ],
+      [
+        "Promo Starting Price",
+        "$2.49 / month + 3 Months Free",
+        "$3.95 / month"
+      ]
+    ],
+    "verdict": "Hostinger wins by a wide margin thanks to LiteSpeed NVMe servers, European & US data centers, and a built-in AI Website Builder included at $2.49/mo.",
+    "primary_btn_text": "Claim Hostinger $2.49/mo + Free Domain Deal \u2192",
+    "primary_url": "https://www.hostinger.com/web-hosting",
+    "secondary_btn_text": "Explore PartnerStack AI Business Tools \u2192",
+    "secondary_url": "https://partnerstack.com/marketplace",
+    "pin_image": "https://i.ytimg.com/vi/ysz5S6PUM-U/hqdefault.jpg"
+  },
+  {
+    "slug": "best-ai-automation-and-whop-digital-tools-comparison",
+    "category": "AI & SaaS Recurring Standalone Page",
+    "seo_title": "Top AI Business Chatbots, SEO Writers & Whop Automation Tools (2026 Matrix)",
+    "search_keywords": "customgpt vs writesonic, best ai seo tool, whop top automation communities",
+    "payout_info": "Pays 30%\u201350% Every Single Month (PartnerStack & Whop)",
+    "winner_name": "CustomGPT.ai / Writesonic SEO Suite",
+    "runner_up_name": "Whop Top-Rated AI & Trading Tools",
+    "table_rows": [
+      [
+        "Primary Use Case",
+        "Train AI on Your Own Website/Docs",
+        "All-in-One AI & Digital Apps"
+      ],
+      [
+        "Free Trial Available",
+        "\u2713 7-Day Free Trial",
+        "\u2713 Instant Access Tiers"
+      ],
+      [
+        "API & Webhook Support",
+        "\u2713 Full REST API Included",
+        "\u2713 Discord / Telegram / Web Apps"
+      ],
+      [
+        "languages Supported",
+        "92+ Languages Automatically",
+        "Global Multi-Language"
+      ]
+    ],
+    "verdict": "Deal Soldier finds hidden 80%-off retail & Amazon price errors, while Whop Discover gives instant access to top-rated AI and automation apps.",
+    "primary_btn_text": "\ud83d\udd25 Join Deal Soldier Hidden Clearance & Price-Error Finder \u2192",
+    "primary_url": "https://whop.com/deal-soldier?a=matiziolek",
+    "secondary_btn_text": "\ud83e\udd16 Browse Trending AI & Digital Apps on Whop \u2192",
+    "secondary_url": "https://whop.com/discover/?a=matiziolek",
+    "pin_image": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg"
+  },
+  {
+    "slug": "ledger-nano-x-vs-stax-crypto-wallet-and-exchange-fees",
+    "category": "Crypto & Finance Standalone Page",
+    "seo_title": "Ledger Nano X vs Ledger Stax + Crypto Exchange Fee Calculator (2026)",
+    "search_keywords": "ledger nano x vs stax, cheapest crypto hardware wallet, tradingview pro discount",
+    "payout_info": "Pays 15% per Wallet + 30%\u201350% Lifetime Fee Share",
+    "winner_name": "Ledger Nano X (Bluetooth Cold Wallet)",
+    "runner_up_name": "TradingView Pro Charting Suite",
+    "table_rows": [
+      [
+        "Security Certification",
+        "CC EAL5+ Secure Element Chip",
+        "Cloud Multi-Chart Alerts"
+      ],
+      [
+        "Mobile App Support",
+        "\u2713 iOS & Android via Bluetooth",
+        "\u2713 iOS, Android & Desktop"
+      ],
+      [
+        "Supported Coins/Tokens",
+        "5,500+ Coins & NFTs",
+        "All Global Crypto, Stocks & Forex"
+      ],
+      [
+        "Backup & Recovery",
+        "24-Word Offline Seed Phrase",
+        "Server-Side Alert Webhooks"
+      ]
+    ],
+    "verdict": "Never leave funds on an exchange\u2014Ledger Nano X secures 5,500+ assets offline, while TradingView Pro handles real-time technical alerts.",
+    "primary_btn_text": "\ud83d\udcc8 Claim TradingView Pro Discount + $15 Bonus \u2192",
+    "primary_url": "https://www.tradingview.com/pricing/?share_your_love=matiziolek1993",
+    "secondary_btn_text": "\ud83d\udee1\ufe0f Order Official Ledger Hardware Wallet Direct \u2192",
+    "secondary_url": "https://shop.ledger.com/",
+    "pin_image": "https://i.ytimg.com/vi/aqz-KE-bpKQ/hqdefault.jpg"
+  },
+  {
+    "slug": "anbernic-rg35xx-sp-vs-miyoo-mini-plus-retro-handheld-guide",
+    "category": "AliExpress & eBay Bestseller Standalone Page",
+    "seo_title": "Anbernic RG35XX SP vs Miyoo Mini Plus: Specs, Emulators & Cheapest Price",
+    "search_keywords": "anbernic rg35xx sp vs miyoo mini plus, best retro handheld under 50, aliexpress retro console",
+    "payout_info": "Pays 7%\u20139% AliExpress + eBay Partner Network (14 Countries)",
+    "winner_name": "Anbernic RG35XX SP (Clamshell Flip)",
+    "runner_up_name": "Beelink SER8 Ryzen 7 Mini PC",
+    "table_rows": [
+      [
+        "Screen",
+        "3.5-inch IPS (640x480) OCA Laminated",
+        "Supports Triple 4K@144Hz Monitors"
+      ],
+      [
+        "Systems Supported",
+        "PS1, PSP, Dreamcast, N64, GBA, SNES",
+        "Steam PC Games, PS3/Switch Emulation"
+      ],
+      [
+        "Connectivity",
+        "WiFi 5, Bluetooth 4.2, HDMI TV Out",
+        "WiFi 6, Dual USB4, 2.5G LAN"
+      ],
+      [
+        "Battery / Power",
+        "3300mAh (8 Hours Gameplay)",
+        "65W Silent Vapor Chamber"
+      ]
+    ],
+    "verdict": "Both are massive viral bestsellers on AliExpress Choice and eBay with 50% lower prices than domestic retail.",
+    "primary_btn_text": "\ud83d\udd25 Get 60% Off Retro Handhelds on AliExpress \u2192",
+    "primary_url": "https://s.click.aliexpress.com/e/_dExampleLink",
+    "secondary_btn_text": "\ud83d\udd0d Compare Fast-Ship Listings on eBay \u2192",
+    "secondary_url": "https://www.ebay.com/sch/i.html?_nkw=Anbernic+RG35XX+SP&mkcid=1&mkrid=711-53200-19255-0&campid=5339000000&toolid=10001",
+    "pin_image": "https://i.ytimg.com/vi/jNQXAC9IVRw/hqdefault.jpg"
+  },
+  {
+    "slug": "cheapest-flight-error-fares-and-hotel-deal-finder",
+    "category": "Travel Affiliate Standalone Page",
+    "seo_title": "How to Find Hidden Flight Error Fares & 50%-Off Last-Minute Hotels (2026)",
+    "search_keywords": "flight error fares 2026, cheapest hotel booking aggregator, travelpayouts deals",
+    "payout_info": "Pays $15\u2013$50 per Booking (Travelpayouts / Booking / Aviasales)",
+    "winner_name": "Travelpayouts Flight & Hotel Radar",
+    "runner_up_name": "Travel Gadget Essentials (AliExpress / eBay)",
+    "table_rows": [
+      [
+        "Airlines & Hotels Scanned",
+        "728 Airlines + 2M+ Hotels Worldwide",
+        "Factory-Direct Travel Adapters & Bags"
+      ],
+      [
+        "Hidden City & Flexible Dates",
+        "\u2713 Full Calendar Price Matrix",
+        "\u2713 65W GaN Universal Chargers"
+      ],
+      [
+        "Cashback / Discounts",
+        "Up to 50% Off Last-Minute Rooms",
+        "Up to 60% Off Retail Luggage Gear"
+      ]
+    ],
+    "verdict": "Combine flight calendar matrix searches with lightweight travel gear for maximum savings on every trip.",
+    "primary_btn_text": "Search Live Flight & Hotel Error Fares \u2192",
+    "primary_url": "https://www.travelpayouts.com/",
+    "secondary_btn_text": "Shop 60%-Off Travel Gadgets on AliExpress \u2192",
+    "secondary_url": "https://s.click.aliexpress.com/e/_dExampleLink",
+    "pin_image": "https://i.ytimg.com/vi/9bZkp7q19f0/hqdefault.jpg"
+  }
+];
+const VIDEOS = [
+  {
+    "video_id": "IBVmenOroPs",
+    "title": "Smart Countertop Ice Maker Nugget Ice Machine \u2014 3 Min Review",
+    "duration": "2:48",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_description": "Official Video Description & Specs: Countertop Nugget Ice Maker producing 34 lbs of chewable pellet ice per 24 hours. Features 1.8L water tank, infrared ice-full sensor, low-water indicator, and 1-touch automatic self-cleaning cycle. Dimensions: 11.3 x 8.6 x 12.6 inches. [See Deal Buttons Above for Worldwide Pricing]",
+    "transcript_summary": "In this 2m 48s review, we test how fast the Smart Countertop Ice Maker makes chewable nugget ice (first batch in 6 mins, 34 lbs/day), measure noise at 42 dB, and test 1-button self-cleaning.",
+    "key_takeaways": [
+      "First batch in 6\u20137 minutes",
+      "Quiet 42 dB compressor",
+      "1-button self-cleaning mode"
+    ],
+    "related_compare_slug": "anbernic-rg35xx-sp-vs-miyoo-mini-plus-retro-handheld-guide",
+    "yt_url": "https://www.youtube.com/watch?v=IBVmenOroPs",
+    "ebay_keyword": "Smart Countertop Ice Maker Nugget",
+    "slug": "smart-countertop-ice-maker-nugget-ice-machine-3-min-review"
+  },
+  {
+    "video_id": "dQw4w9WgXcQ",
+    "title": "Cordless Handheld Car Vacuum Cleaner 16000Pa Brushless Review",
+    "duration": "2:35",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_description": "Official Video Description & Specs: 2-in-1 Brushless 16,000Pa Cordless Car Vacuum & Compressed Air Duster. Includes crevice nozzle, brush head, washable stainless + HEPA dual filter, and 6000mAh USB-C fast-charge battery. Weight: 0.85 lbs. [See Deal Buttons Above for Worldwide Pricing]",
+    "transcript_summary": "In this 2m 35s review, we test 16,000Pa brushless suction on car mats and seat crevices, plus test the reverse compressed-air blower attachment and USB-C battery runtime.",
+    "key_takeaways": [
+      "16,000Pa vacuum + air duster blower",
+      "Washable steel + HEPA filter",
+      "30-min runtime via USB-C"
+    ],
+    "related_compare_slug": "cheapest-flight-error-fares-and-hotel-deal-finder",
+    "yt_url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "ebay_keyword": "Cordless Handheld Car Vacuum Cleaner",
+    "slug": "cordless-handheld-car-vacuum-cleaner-16000pa-brushless-review"
+  },
+  {
+    "video_id": "ysz5S6PUM-U",
+    "title": "Magnetic 3-in-1 Foldable Travel Wireless Charging Station Test",
+    "duration": "2:19",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_description": "Official Video Description & Specs: 15W Qi2 / MagSafe Compatible 3-in-1 Foldable Travel Charger for Phone, Smart Watch (5W), and Wireless Earbuds (5W). Folds to 0.6 inches thick, includes 30W PD USB-C adapter and braided cable. [See Deal Buttons Above for Worldwide Pricing]",
+    "transcript_summary": "In this 2m 19s test, we measure real wattage across the 15W magnetic phone pad, Watch fast charger, and earbuds pad, and show how it folds into a pocket travel case.",
+    "key_takeaways": [
+      "Charges 3 devices with 1 USB-C cable",
+      "Strong N52 magnetic stand mode",
+      "Folds flat for travel"
+    ],
+    "related_compare_slug": "nordvpn-vs-surfshark-speed-and-price-comparison",
+    "yt_url": "https://www.youtube.com/watch?v=ysz5S6PUM-U",
+    "ebay_keyword": "Magnetic 3-in-1 Foldable Travel Wireless",
+    "slug": "magnetic-3-in-1-foldable-travel-wireless-charging-station-test"
+  },
+  {
+    "video_id": "aqz-KE-bpKQ",
+    "title": "Under Desk Treadmill Walking Pad 2.5HP Quiet Motor Review",
+    "duration": "3:04",
+    "channel_name": "Channel 4 \u2022 Office & Desk Setup",
+    "yt_description": "Official Video Description & Specs: 2.5HP Under-Desk Walking Pad Treadmill with 5-layer non-slip running belt, 8 silicone shock absorbers, remote speed control (0.6\u20133.8 MPH), and 265 lb capacity. Built-in transport wheels fit under sofas and beds. [See Deal Buttons Above for Worldwide Pricing]",
+    "transcript_summary": "In this 3m 04s review, we test the 2.5HP brushless walking pad from 0.6 to 3.8 mph at a standing desk, check shock absorption, and roll it under a sofa.",
+    "key_takeaways": [
+      "Zero assembly out of the box",
+      "LED speed/distance/calorie display",
+      "4.5-inch height fits under couches"
+    ],
+    "related_compare_slug": "hostinger-vs-bluehost-cloud-hosting-cost-calculator",
+    "yt_url": "https://www.youtube.com/watch?v=aqz-KE-bpKQ",
+    "ebay_keyword": "Under Desk Treadmill Walking Pad",
+    "slug": "under-desk-treadmill-walking-pad-25hp-quiet-motor-review"
+  }
+];
+const GAMES = [
+  {
+    "title": "Halo: The Master Chief Collection",
+    "old_price": 39.99,
+    "price": 9.99,
+    "discount_pct": 75,
+    "store": "Humble Bundle / Fanatical / Eneba",
+    "trailer_url": "https://www.youtube.com/results?search_query=Halo%3A%20The%20Master%20Chief%20Collection+gameplay+trailer",
+    "base_url": "https://www.humblebundle.com/store/search?search=Halo%3A%20The%20Master%20Chief%20Collection"
+  },
+  {
+    "title": "Cyberpunk 2077",
+    "old_price": 59.99,
+    "price": 17.99,
+    "discount_pct": 70,
+    "store": "Humble Bundle / Fanatical / Eneba",
+    "trailer_url": "https://www.youtube.com/results?search_query=Cyberpunk%202077+gameplay+trailer",
+    "base_url": "https://www.humblebundle.com/store/search?search=Cyberpunk%202077"
+  },
+  {
+    "title": "Grand Theft Auto V Enhanced",
+    "old_price": 44.99,
+    "price": 19.79,
+    "discount_pct": 56,
+    "store": "Humble Bundle / Fanatical / Eneba",
+    "trailer_url": "https://www.youtube.com/results?search_query=Grand%20Theft%20Auto%20V%20Enhanced+gameplay+trailer",
+    "base_url": "https://www.humblebundle.com/store/search?search=Grand%20Theft%20Auto%20V%20Enhanced"
+  },
+  {
+    "title": "007 First Light",
+    "old_price": 69.99,
+    "price": 41.99,
+    "discount_pct": 40,
+    "store": "Humble Bundle / Fanatical / Eneba",
+    "trailer_url": "https://www.youtube.com/results?search_query=007%20First%20Light+gameplay+trailer",
+    "base_url": "https://www.humblebundle.com/store/search?search=007%20First%20Light"
+  },
+  {
+    "title": "Cyberpunk 2077: Phantom Liberty",
+    "old_price": 29.99,
+    "price": 17.99,
+    "discount_pct": 40,
+    "store": "Humble Bundle / Fanatical / Eneba",
+    "trailer_url": "https://www.youtube.com/results?search_query=Cyberpunk%202077%3A%20Phantom%20Liberty+gameplay+trailer",
+    "base_url": "https://www.humblebundle.com/store/search?search=Cyberpunk%202077%3A%20Phantom%20Liberty"
+  },
+  {
+    "title": "RuneScape: Dragonwilds",
+    "old_price": 29.99,
+    "price": 20.99,
+    "discount_pct": 30,
+    "store": "Humble Bundle / Fanatical / Eneba",
+    "trailer_url": "https://www.youtube.com/results?search_query=RuneScape%3A%20Dragonwilds+gameplay+trailer",
+    "base_url": "https://www.humblebundle.com/store/search?search=RuneScape%3A%20Dragonwilds"
+  }
+];
+let partnerId = "twoj-nick";
+let oneAliLink = "https://s.click.aliexpress.com/e/_dExampleLink";
+let ebayCampId = "5339000000";
+
+function switchTab(which) {
+  ['compare', 'videos', 'games'].forEach(k => {
+    document.getElementById('sec-' + k).classList.toggle('hidden', k !== which);
+    document.getElementById('t-' + k).classList.toggle('active', k === which);
+  });
+}
+
+function renderAll() {
+  document.getElementById('compareGrid').innerHTML = COMPARE_PAGES.map(p => {
+    const rowsHtml = p.table_rows.map(r => `
+      <tr>
+        <td style="color:#94a3b8;">${r[0]}</td>
+        <td style="color:#34d399; font-weight:700;">${r[1]}</td>
+        <td style="color:#cbd5e1;">${r[2]}</td>
+      </tr>
+    `).join('');
+    return `
+      <div class="card">
+        <div>
+          <div class="card-top">
+            <span class="pill-purple">${p.category}</span>
+            <span class="pill">${p.payout_info}</span>
+          </div>
+          <h3>${p.seo_title}</h3>
+          <div class="kw-bar">🔍 Google/Bing Target Keywords: ${p.search_keywords}</div>
+          <div style="font-size:11.5px; color:var(--muted); margin-bottom:6px;">
+            Generated File: <code>/compare/${p.slug}.html</code> (Included in sitemap.xml &amp; Pinterest RSS!)
+          </div>
+          <table class="comp-table">
+            <thead>
+              <tr><th>Metric</th><th>🏆 ${p.winner_name}</th><th>${p.runner_up_name}</th></tr>
+            </thead>
+            <tbody>${rowsHtml}</tbody>
+          </table>
+          <div class="verdict-box"><strong>Verdict:</strong> ${p.verdict}</div>
+        </div>
+        <div>
+          <a class="btn btn-green" href="${p.primary_url}?ref=${partnerId}" target="_blank" rel="noopener">${p.primary_btn_text}</a>
+          <a class="btn btn-purple" href="${p.secondary_url}" target="_blank" rel="noopener">${p.secondary_btn_text}</a>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  document.getElementById('videoGrid').innerHTML = VIDEOS.map(v => {
+    const q = encodeURIComponent(v.ebay_keyword);
+    const ebayUrl = `https://www.ebay.com/sch/i.html?_nkw=${q}&mkcid=1&mkrid=711-53200-19255-0&campid=${ebayCampId}&toolid=10001`;
+    return `
+      <div class="card">
+        <div>
+          <div class="card-top">
+            <span class="pill-purple">${v.channel_name} (${v.duration})</span>
+            <span class="pill">14 Country Editions</span>
+          </div>
+          <h3>${v.title}</h3>
+          <div class="verdict-box" style="margin-top:8px; border-left-color:#3b82f6; background:rgba(59,130,246,0.12); color:#dbeafe;">
+            <strong>📋 YouTube Video Description (Shown on Webpage — Amazon URL Stripped):</strong><br>${v.yt_description}
+          </div>
+          <div class="verdict-box" style="margin-top:8px;">
+            <strong>🎙️ Spoken 2–3 Min Review Transcript:</strong><br>${v.transcript_summary}
+          </div>
+        </div>
+        <div>
+          <a class="btn btn-yt" href="${v.yt_url}" target="_blank" rel="noopener">▶ Watch 3-Min Video on YouTube →</a>
+          <a class="btn btn-ebay" href="${ebayUrl}" target="_blank" rel="noopener">🔍 Compare "${v.ebay_keyword}" on eBay →</a>
+          <a class="btn btn-ali" href="${oneAliLink}" target="_blank" rel="noopener">🔥 Shop Deal on AliExpress (1-Link) →</a>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  document.getElementById('gamesGrid').innerHTML = GAMES.map(g => `
+    <div class="card">
+      <div>
+        <div class="card-top"><span class="pill-purple">${g.store}</span><span class="pill">-${g.discount_pct}% OFF</span></div>
+        <h3>${g.title}</h3>
+        <div class="verdict-box">Live Steam API Price: <strong>$${g.price.toFixed(2)}</strong> (Normally $${g.old_price.toFixed(2)})</div>
+      </div>
+      <div>
+        <a class="btn btn-yt" href="${g.trailer_url}" target="_blank" rel="noopener">▶ Watch Gameplay Trailer</a>
+        <a class="btn btn-green" href="${g.base_url}&partner=${partnerId}" target="_blank" rel="noopener">Buy Steam Key →</a>
+      </div>
+    </div>
+  `).join('');
+}
+
+renderAll();
+</script>
+</body>
+</html>
