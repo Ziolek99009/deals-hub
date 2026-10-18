@@ -1,1 +1,2402 @@
-[]
+[
+  {
+    "video_id": "wxIwEXeQ3tw",
+    "title": "From Android to QuakeCon: What 90s Game Engines Teach Us About Extreme Optimization",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "64:35",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=wxIwEXeQ3tw"
+  },
+  {
+    "video_id": "i3X7Fv0Z3Uc",
+    "title": "Turning raw hardware sensor data into music with Gemini",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "1:27",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=i3X7Fv0Z3Uc"
+  },
+  {
+    "video_id": "Bq1jh2MmScI",
+    "title": "Effect Maker Tutorial: Gaming 101 with @cloves_ar",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "23:25",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=Bq1jh2MmScI"
+  },
+  {
+    "video_id": "91oc9SyHxKI",
+    "title": "Project Planetarium: 3D Android UI with Gemini 4 Argon",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "1:17",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=91oc9SyHxKI"
+  },
+  {
+    "video_id": "nSwmcs37Jd4",
+    "title": "Gemini 4 Argon in Antigravity",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "1:19",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=nSwmcs37Jd4"
+  },
+  {
+    "video_id": "dIdG-SSFSd0",
+    "title": "YouTube For Artists Masterclass: Master Fandom on YouTube",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "23:25",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=dIdG-SSFSd0"
+  },
+  {
+    "video_id": "JMPd2jbQEqo",
+    "title": "Android CLI and skills to improve your development",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "3:27",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=JMPd2jbQEqo"
+  },
+  {
+    "video_id": "Jh6mgf9M06M",
+    "title": "Gemini 4 Argon: What\u2019s new and what\u2019s next",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "30:21",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=Jh6mgf9M06M"
+  },
+  {
+    "video_id": "IaszQaGHi5w",
+    "title": "Made On YouTube 2026 | Creator Roundup",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "7:10",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=IaszQaGHi5w"
+  },
+  {
+    "video_id": "LRtmjH86d-s",
+    "title": "PUBG MOBILE built a more connected player world with Level Up program",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "3:24",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=LRtmjH86d-s"
+  },
+  {
+    "video_id": "OYp5j2RihPE",
+    "title": "Gemini 4 Argon and Google Antigravity: From 2D concept to 3D cathedral",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "1:11",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=OYp5j2RihPE"
+  },
+  {
+    "video_id": "2jFtOASCEfY",
+    "title": "YPP Updates, View Count Changes, and more | Creator Roundup",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:19",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=2jFtOASCEfY"
+  },
+  {
+    "video_id": "lKqh34XT7Q8",
+    "title": "What\u2019s new: Android Studio Quail releases",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "4:24",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=lKqh34XT7Q8"
+  },
+  {
+    "video_id": "7sKHiuE7J-Y",
+    "title": "Building low-latency remote robotics with Gemini",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "1:12",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=7sKHiuE7J-Y"
+  },
+  {
+    "video_id": "5YWf2c9YYlk",
+    "title": "HOW TO: Create a Makeup Switcher Effect with @Louise Royer",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "9:22",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=5YWf2c9YYlk"
+  },
+  {
+    "video_id": "BEJ-RSgThuo",
+    "title": "Android AI Tools: Vibe coding, sub-agents, and the Android CLI",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "76:47",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=BEJ-RSgThuo"
+  },
+  {
+    "video_id": "fL9OBJO3Gu8",
+    "title": "Building with Gemma 4",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:23",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=fL9OBJO3Gu8"
+  },
+  {
+    "video_id": "bo9IbQB6LS8",
+    "title": "Tag Amazon Products in the YouTube Shopping Affiliate Program",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "1:42",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=bo9IbQB6LS8"
+  },
+  {
+    "video_id": "HEqXwUm6vd0",
+    "title": "The inside story of Jetpack Compose",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "67:47",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=HEqXwUm6vd0"
+  },
+  {
+    "video_id": "pijSNA-hWkg",
+    "title": "Turning code into fabric with Gemini",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "1:20",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=pijSNA-hWkg"
+  },
+  {
+    "video_id": "gdDctjC10SY",
+    "title": "NEW: Updates to the YouTube Partner Program",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "4:11",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=gdDctjC10SY"
+  },
+  {
+    "video_id": "pLNJ-fNYTKU",
+    "title": "The future unfolds! How to optimize Android apps for adaptive layouts",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:11",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=pLNJ-fNYTKU"
+  },
+  {
+    "video_id": "lTQHImoeuEY",
+    "title": "Top 3 new model launches at Gemini Audio at Night",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "1:22",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=lTQHImoeuEY"
+  },
+  {
+    "video_id": "VTMhhYTl9Co",
+    "title": "Collab with more Creators, Turn Playlists Into Shows, and more | Creator Roundup",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:09",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=VTMhhYTl9Co"
+  },
+  {
+    "video_id": "0wdki_Yw3rI",
+    "title": "Google Play PolicyBytes - July 2026 policy updates",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "5:31",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=0wdki_Yw3rI"
+  },
+  {
+    "video_id": "anPsS6huQk0",
+    "title": "Introducing EmbeddingGemma 2: An open model for natively multimodal embeddings",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "3:10",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=anPsS6huQk0"
+  },
+  {
+    "video_id": "fdBqr6AA7K0",
+    "title": "Effect Maker Tutorial: Drawing 102 with \u202a@varunraikar",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "22:20",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=fdBqr6AA7K0"
+  },
+  {
+    "video_id": "RyO2H1VbqdM",
+    "title": "Build adaptive apps with Compose's new APIs (I/O Connect '26)",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "35:20",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=RyO2H1VbqdM"
+  },
+  {
+    "video_id": "Rnz9mOyxk0k",
+    "title": "How to transform audio into physical prints using Gemini and Google AI Studio",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "1:05",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=Rnz9mOyxk0k"
+  },
+  {
+    "video_id": "zmAyVXtPXT8",
+    "title": "THE BRAND DEAL DESK LIVE FROM CANNES: Hide and Seek with Virgin Media O2 and The Sidemen",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "20:10",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=zmAyVXtPXT8"
+  },
+  {
+    "video_id": "ZtVQGkUKNAk",
+    "title": "Build for the wrist, the road, and the remote with Jetpack Compose and Gemini (I/O Connect '26)",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "33:45",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=ZtVQGkUKNAk"
+  },
+  {
+    "video_id": "s82Ho5HdltE",
+    "title": "Per-Layer Embeddings (PLE) in Gemma 4 explained",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:05",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=s82Ho5HdltE"
+  },
+  {
+    "video_id": "35VzPlY1-kI",
+    "title": "YouTube for Artists Masterclass: Going Live on YouTube with Sheniece Charway",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "18:52",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=35VzPlY1-kI"
+  },
+  {
+    "video_id": "OfgKsdp84hs",
+    "title": "Build 3d experiences using Jetpack XR (I/O Connect \u201826)",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "21:42",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=OfgKsdp84hs"
+  },
+  {
+    "video_id": "-G431WC_-RM",
+    "title": "The next generation of voice AI with Google DeepMind and Sierra AI",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "5:22",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=-G431WC_-RM"
+  },
+  {
+    "video_id": "ht2DCc5OJEg",
+    "title": "How to Create a Timeline Effect in Effect Maker with @Cloves Filho",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "8:40",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=ht2DCc5OJEg"
+  },
+  {
+    "video_id": "4BlGtrTeCMU",
+    "title": "Optimize your app performance for the next generation of Android (I/O Connect \u201826)",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "37:55",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=4BlGtrTeCMU"
+  },
+  {
+    "video_id": "YDCB8Bk1OBE",
+    "title": "Gemma 4 12B: The encoder-free model explained",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:27",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=YDCB8Bk1OBE"
+  },
+  {
+    "video_id": "b89zM3tGxbs",
+    "title": "How to Create an Elemental Aura Effect in Effect Maker with @Varun Raikar",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "15:42",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=b89zM3tGxbs"
+  },
+  {
+    "video_id": "UnDvXh7l85Q",
+    "title": "Creative video editing with Jetpack Media3 and Gemini (I/O Connect '26)",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "25:14",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=UnDvXh7l85Q"
+  },
+  {
+    "video_id": "4oxA9o_OmWo",
+    "title": "Understand the Gemma 4 model family",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:21",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=4oxA9o_OmWo"
+  },
+  {
+    "video_id": "IUKB5rZzYS4",
+    "title": "Music in Posts, Updated Content Tab, and more | Creator Roundup",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:15",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=IUKB5rZzYS4"
+  },
+  {
+    "video_id": "SpiSeSzfNW4",
+    "title": "Develop faster with Android Studio, AI and skills (I/O Connect \u201826)",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "37:13",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=SpiSeSzfNW4"
+  },
+  {
+    "video_id": "3CyW24Pkz4o",
+    "title": "What's new in the Gemini Live API",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "7:17",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=3CyW24Pkz4o"
+  },
+  {
+    "video_id": "8P-PxmECoFI",
+    "title": "The Content Tab in YouTube Studio",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:02",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=8P-PxmECoFI"
+  },
+  {
+    "video_id": "qtQMH8RBYIo",
+    "title": "Build intelligent experiences: Deep dive into AppFunctions (I/O Connect '26)",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "27:51",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=qtQMH8RBYIo"
+  },
+  {
+    "video_id": "CBzLIKfWpdg",
+    "title": "Celebrating one billion Gemma downloads",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "0:56",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=CBzLIKfWpdg"
+  },
+  {
+    "video_id": "yoAcphhJRYU",
+    "title": "THE BRAND DEAL DESK: Published. Now What?",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "9:58",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=yoAcphhJRYU"
+  },
+  {
+    "video_id": "hcvvo6Sag0Q",
+    "title": "How to understand Play\u2019s expanded billing options and lower fees",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:11",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=hcvvo6Sag0Q"
+  },
+  {
+    "video_id": "ytjgy30Cono",
+    "title": "Agentic video understanding in Gemini",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "3:19",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=ytjgy30Cono"
+  },
+  {
+    "video_id": "Arl_-P00nkc",
+    "title": "How to Create a Safari 3D Effect in Effect Maker with @Cloves Filho",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "14:29",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=Arl_-P00nkc"
+  },
+  {
+    "video_id": "WDoxljZc5QM",
+    "title": "What's new in Android XR development",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "1:57",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=WDoxljZc5QM"
+  },
+  {
+    "video_id": "Rrr2gdbvNFU",
+    "title": "Koray Kavukcuoglu on frontier models, coding agents, and building AGI",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "26:47",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=Rrr2gdbvNFU"
+  },
+  {
+    "video_id": "A5DJgVd6IWk",
+    "title": "Effect Maker Tutorial: Drawing 101 with @Varun Raikar",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "13:43",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=A5DJgVd6IWk"
+  },
+  {
+    "video_id": "nmbBWSX8l54",
+    "title": "Build for Android XR with your preferred 3D engine",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:35",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=nmbBWSX8l54"
+  },
+  {
+    "video_id": "PWPsZssgfDo",
+    "title": "How to build with Gemini 3.5 Transcribe",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "4:50",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=PWPsZssgfDo"
+  },
+  {
+    "video_id": "C0L-bPeCuXM",
+    "title": "YouTube Shopping Affiliate Program",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "5:10",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=C0L-bPeCuXM"
+  },
+  {
+    "video_id": "saRE0t11KJY",
+    "title": "How to build apps for Android XR without hardware",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "5:00",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=saRE0t11KJY"
+  },
+  {
+    "video_id": "kN_iMEAi1dw",
+    "title": "Build a live translation broadcast app with the Gemini Live API and LiveKit",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "12:37",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=kN_iMEAi1dw"
+  },
+  {
+    "video_id": "kVwf__CuHgc",
+    "title": "THE BRAND DEAL DESK: The Magic Middle",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "10:16",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=kVwf__CuHgc"
+  },
+  {
+    "video_id": "8rbub6oDBtg",
+    "title": "Android 17 AOSP is here",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "3:10",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=8rbub6oDBtg"
+  },
+  {
+    "video_id": "kacf2bib-X0",
+    "title": "Hands on with Gemini 3.7 Flash",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "4:21",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=kacf2bib-X0"
+  },
+  {
+    "video_id": "zuGYVYu6glI",
+    "title": "Effect Maker Tutorial: Visual Scripting 103 with \u202a@Heather McGee",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "20:23",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=zuGYVYu6glI"
+  },
+  {
+    "video_id": "otzSN5pSNZk",
+    "title": "The latest in Android XR",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "1:15",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=otzSN5pSNZk"
+  },
+  {
+    "video_id": "9_PtOVH2FPE",
+    "title": "Introducing Gemini 3.7 Flash",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:33",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=9_PtOVH2FPE"
+  },
+  {
+    "video_id": "vkqvm4aRq_c",
+    "title": "THE BRAND DEAL DESK: Price It Like You Mean It",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "9:12",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=vkqvm4aRq_c"
+  },
+  {
+    "video_id": "07Rrbj4hLmA",
+    "title": "What's new in Jetpack Compose",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "5:41",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=07Rrbj4hLmA"
+  },
+  {
+    "video_id": "hfAkpEM9N5M",
+    "title": "How builders at YC Startup School are using Gemini & Google AI",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:05",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=hfAkpEM9N5M"
+  },
+  {
+    "video_id": "XR14Sk9h8zY",
+    "title": "THE BRAND DEAL DESK: Be That Pitch",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "8:23",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=XR14Sk9h8zY"
+  },
+  {
+    "video_id": "qZLQVlLgTDU",
+    "title": "What are Android skills and how to use them with AI tools?",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "17:11",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=qZLQVlLgTDU"
+  },
+  {
+    "video_id": "-rYFDefcq3k",
+    "title": "Introducing Gemini Robotics 2",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "39:14",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=-rYFDefcq3k"
+  },
+  {
+    "video_id": "g0dIRjd53K4",
+    "title": "Unique Reach, Live Countdown Stickers, Updates to Shorts Remix & more | Creator Roundup",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "3:25",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=g0dIRjd53K4"
+  },
+  {
+    "video_id": "7fQhKxQGy5A",
+    "title": "What's new for Android developer productivity at I/O",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "1:31",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=7fQhKxQGy5A"
+  },
+  {
+    "video_id": "z6l5nyE_6-I",
+    "title": "Voice Agent observability with LangSmith",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "7:38",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=z6l5nyE_6-I"
+  },
+  {
+    "video_id": "V-D5wumXO8Y",
+    "title": "Ask Studio",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "1:44",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=V-D5wumXO8Y"
+  },
+  {
+    "video_id": "Wh3LWb_Phfk",
+    "title": "How to build premium Android experiences",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:00",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=Wh3LWb_Phfk"
+  },
+  {
+    "video_id": "BXzFk5kK5_Q",
+    "title": "Android Studio Quail 2, the Build with Gemini XPRIZE, and more! - Google Developer News July 2026",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "5:24",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=BXzFk5kK5_Q"
+  },
+  {
+    "video_id": "DSM5uHof9lQ",
+    "title": "THE BRAND DEAL DESK: The Brand Deal Universe",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "8:57",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=DSM5uHof9lQ"
+  },
+  {
+    "video_id": "2K7VVAMUYPw",
+    "title": "Connect to the intelligence system",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "8:58",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=2K7VVAMUYPw"
+  },
+  {
+    "video_id": "JRArFxEfyQU",
+    "title": "How are large language models trained?",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "10:09",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=JRArFxEfyQU"
+  },
+  {
+    "video_id": "ghsVOck_qls",
+    "title": "HOW TO: Create an Old Soul vs New Gen Slider Effect with @Louise Royer",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "13:19",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=ghsVOck_qls"
+  },
+  {
+    "video_id": "TZNu9u9TfN4",
+    "title": "Top 3 AI on Android updates for building intelligent experiences (Google I/O 2026)",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:04",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=TZNu9u9TfN4"
+  },
+  {
+    "video_id": "iOK1-b_9Dlg",
+    "title": "Get started with the Interactions API",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "8:51",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=iOK1-b_9Dlg"
+  },
+  {
+    "video_id": "4UIdG9w1bwE",
+    "title": "How to Create a Time Traveler Effect in Effect Maker with @Varun Raikar",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "12:15",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=4UIdG9w1bwE"
+  },
+  {
+    "video_id": "peplbYt0Ohg",
+    "title": "Introducing Android Performance Analyzer - The Next Evolution in Profiling for Android",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "6:19",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=peplbYt0Ohg"
+  },
+  {
+    "video_id": "8I7wr2hYFec",
+    "title": "Antigravity Arcade: From prompt to game in minutes",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "8:53",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=8I7wr2hYFec"
+  },
+  {
+    "video_id": "C3kH-LqoFns",
+    "title": "Thumbnail Updates, Effect Maker Expansion, Test Effects Before Going Live & more | Creator Roundup",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "3:02",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=C3kH-LqoFns"
+  },
+  {
+    "video_id": "uriDDQZWXXw",
+    "title": "Develop faster with AI in Android Studio",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "40:26",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=uriDDQZWXXw"
+  },
+  {
+    "video_id": "yGHi5V4sVkc",
+    "title": "Build With AI 2026 Recap",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "1:00",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=yGHi5V4sVkc"
+  },
+  {
+    "video_id": "ErvtIvKpAVg",
+    "title": "How to Create an AI Head Gesture Quiz in Effect Maker with @Varun Raikar",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "12:45",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=ErvtIvKpAVg"
+  },
+  {
+    "video_id": "_iuXykdlTkk",
+    "title": "Build intelligent Android apps with Google's AI",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "45:50",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=_iuXykdlTkk"
+  },
+  {
+    "video_id": "KwJwYIqDMLY",
+    "title": "Building an Android app in AI Studio",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "3:05",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=KwJwYIqDMLY"
+  },
+  {
+    "video_id": "pSrW76ESjao",
+    "title": "HOW TO: Create a Randomized Prediction Effect with @Louise Royer",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "7:45",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=pSrW76ESjao"
+  },
+  {
+    "video_id": "thfNTC9x_Ys",
+    "title": "Adaptive development for the expanding Android ecosystem",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "42:10",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=thfNTC9x_Ys"
+  },
+  {
+    "video_id": "KIp8PAU3oAI",
+    "title": "Create agent skills for on-device generative AI (I/O Connect \u201826)",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "15:58",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=KIp8PAU3oAI"
+  },
+  {
+    "video_id": "lYhVPh4oFXc",
+    "title": "Shopping Affiliate Program Expansion, Creator Voice Replies, and more | Creator Roundup",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:16",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=lYhVPh4oFXc"
+  },
+  {
+    "video_id": "e-wlF3cmJms",
+    "title": "Build custom design systems with Jetpack Compose's new Styles API",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "36:18",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=e-wlF3cmJms"
+  },
+  {
+    "video_id": "WZvd1tUreTY",
+    "title": "Dynamic Callbacks on Android for Google Pay",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "4:06",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=WZvd1tUreTY"
+  },
+  {
+    "video_id": "Egwuaa7zu2M",
+    "title": "How To Make an AI Randomizer Effect in Effect Maker with @Varun Raikar",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "9:06",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=Egwuaa7zu2M"
+  },
+  {
+    "video_id": "vCHU6eUFxdk",
+    "title": "Make your UI adaptive with Android Studio's AI agent",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "37:12",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=vCHU6eUFxdk"
+  },
+  {
+    "video_id": "nRLZqaNOrwQ",
+    "title": "Build creative apps with the GenMedia suite (I/O Connect \u201826)",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "27:24",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=nRLZqaNOrwQ"
+  },
+  {
+    "video_id": "UFlcZJLddYQ",
+    "title": "Effect Maker Tutorial: Visual Scripting 102 with @Heather McGee",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "17:58",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=UFlcZJLddYQ"
+  },
+  {
+    "video_id": "zRBi6oBtpoo",
+    "title": "Build beautiful, premium, adaptive apps with Material",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "12:48",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=zRBi6oBtpoo"
+  },
+  {
+    "video_id": "d9LAQWKUnx8",
+    "title": "Build agents with Gemini API (I/O Connect \u201826)",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "37:10",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=d9LAQWKUnx8"
+  },
+  {
+    "video_id": "WMd7YiqnV4w",
+    "title": "YouTube for Artists Masterclass: Making Money on YouTube with AJ Ramos",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "24:43",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=WMd7YiqnV4w"
+  },
+  {
+    "video_id": "j0k8qizH0KY",
+    "title": "Build adaptive layouts with Navigation 3",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "14:13",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=j0k8qizH0KY"
+  },
+  {
+    "video_id": "YvVsdZL2ogY",
+    "title": "Sameer Samat on Android 17 and the Future of Intelligent Computing",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "40:10",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=YvVsdZL2ogY"
+  },
+  {
+    "video_id": "OHcdUSJvA9w",
+    "title": "HOW TO: Create a Face Paint Effect in Effect Maker with @Louise Royer",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "8:33",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=OHcdUSJvA9w"
+  },
+  {
+    "video_id": "Z7zx_sTbFPI",
+    "title": "Deploy Android on-device AI with ML Kit GenAI and LiteRT-LM",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "17:06",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=Z7zx_sTbFPI"
+  },
+  {
+    "video_id": "HcwMTu1xQDw",
+    "title": "Gemma 4 in Action: Bringing Frontier AI to the Edge",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "4:08",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=HcwMTu1xQDw"
+  },
+  {
+    "video_id": "s0HWdnIU5RA",
+    "title": "Understanding Changes in Watch Time",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "4:15",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=s0HWdnIU5RA"
+  },
+  {
+    "video_id": "alVIYAu51V8",
+    "title": "Grow your business with Google Play",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "13:23",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=alVIYAu51V8"
+  },
+  {
+    "video_id": "cL7uFe5RqHY",
+    "title": "AI tools for human creativity",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "64:15",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=cL7uFe5RqHY"
+  },
+  {
+    "video_id": "L7AMjBJ519c",
+    "title": "How to Create an AI Transformation Effect with Effect Maker with @Varun Raikar",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "11:12",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=L7AMjBJ519c"
+  },
+  {
+    "video_id": "1KOO2lqsdaA",
+    "title": "The latest in Android XR",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "17:33",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=1KOO2lqsdaA"
+  },
+  {
+    "video_id": "KPx3nRwbldE",
+    "title": "Run Gemma on Reachy Mini, an open source robot",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:53",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=KPx3nRwbldE"
+  },
+  {
+    "video_id": "AqY3bWDd5bM",
+    "title": "Effect Maker Tutorial: Visual Scripting 101 with @Heather McGee",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "16:42",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=AqY3bWDd5bM"
+  },
+  {
+    "video_id": "Ch1EwR18Dqc",
+    "title": "Supercharge Android media experiences with Jetpack Media3 and CameraX",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "21:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=Ch1EwR18Dqc"
+  },
+  {
+    "video_id": "UlbokBsjMRY",
+    "title": "Gemini 3.5 Live Translate, Gemini in Xcode, and more! - Google Developer News June 2026",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "4:19",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=UlbokBsjMRY"
+  },
+  {
+    "video_id": "FguoxTiyAm8",
+    "title": "YouTube Create iOS Expansion, Stream Across Formats & more | Creator Roundup",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "3:47",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=FguoxTiyAm8"
+  },
+  {
+    "video_id": "m5luu5n1YPU",
+    "title": "Cleaning up messy legacy code",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=m5luu5n1YPU"
+  },
+  {
+    "video_id": "LJ2v4-FvPcA",
+    "title": "\ud83e\uddf0 Builders building with Gemini Audio",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=LJ2v4-FvPcA"
+  },
+  {
+    "video_id": "G-1-sriRBMU",
+    "title": "Ask Studio can soon refresh old thumbnails to help you reach a new audience \ud83d\udd25 #MadeOnYouTube",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=G-1-sriRBMU"
+  },
+  {
+    "video_id": "PMQqv30_4yw",
+    "title": "Project Planetarium: 3D Android UI with Gemini 4 Argon",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=PMQqv30_4yw"
+  },
+  {
+    "video_id": "-nmcYcO-EE8",
+    "title": "\ud83c\udfb5 Turning motion into music with Gemini",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=-nmcYcO-EE8"
+  },
+  {
+    "video_id": "Rpisw-1BcgI",
+    "title": "Introducing Shorts series at #MadeOnYouTube",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=Rpisw-1BcgI"
+  },
+  {
+    "video_id": "gQswwgjX6n8",
+    "title": "Test on real hardware through Android CLI",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=gQswwgjX6n8"
+  },
+  {
+    "video_id": "qJplHFjyv2A",
+    "title": "\ud83d\udcd6 Explore custom voice narration with Gemini 3.8 Flash TTS",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=qJplHFjyv2A"
+  },
+  {
+    "video_id": "13Mayu5l7ec",
+    "title": "From finding brand partners to taking your Shopping earnings further: see what's new #MadeOnYouTube",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=13Mayu5l7ec"
+  },
+  {
+    "video_id": "lBzZQmaC_2w",
+    "title": "Build better Wear OS apps with the Wear Compose Material 3 Android skill",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=lBzZQmaC_2w"
+  },
+  {
+    "video_id": "IBVmenOroPs",
+    "title": "Order in any language with Gemini 3.5 Live Translate",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=IBVmenOroPs"
+  },
+  {
+    "video_id": "IMoqewYDS0I",
+    "title": "#shortsroundup from MADE ON 2026 \ud83c\udfac",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=IMoqewYDS0I"
+  },
+  {
+    "video_id": "bfIcv4JZHis",
+    "title": "Are you still typing code?",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=bfIcv4JZHis"
+  },
+  {
+    "video_id": "fMgcm9aXZyY",
+    "title": "\ud83e\udd16 Operating real hardware with Gemini AI",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=fMgcm9aXZyY"
+  },
+  {
+    "video_id": "uwS7-61H19E",
+    "title": "Custom Shorts thumbs, practice before going live & more #shortsroundup",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=uwS7-61H19E"
+  },
+  {
+    "video_id": "O6iSbR7mFJ0",
+    "title": "How Android Bench 2.0 pushes model evaluations",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=O6iSbR7mFJ0"
+  },
+  {
+    "video_id": "XnIXupxiRo4",
+    "title": "\ud83d\udcf7 Searching for images from text with EmbeddingGemma 2",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=XnIXupxiRo4"
+  },
+  {
+    "video_id": "aOYEnNMSBQI",
+    "title": "Tag Amazon products with YouTube Shopping",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=aOYEnNMSBQI"
+  },
+  {
+    "video_id": "YYsB5pntv_c",
+    "title": "Automating test generation with Gemini in Android Studio",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=YYsB5pntv_c"
+  },
+  {
+    "video_id": "7Ol-0Iq0JMA",
+    "title": "Real-time golf swing coaching with Gemini 3.8 Live",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=7Ol-0Iq0JMA"
+  },
+  {
+    "video_id": "wp7xpJj1aOY",
+    "title": "Try Out Practice Mode Before Going Live! \ud83e\udd33",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=wp7xpJj1aOY"
+  },
+  {
+    "video_id": "K8D_uDQRWBg",
+    "title": "How to build the case for enterprise investment in XR",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=K8D_uDQRWBg"
+  },
+  {
+    "video_id": "gsjPR_qW618",
+    "title": "\ud83e\uddf6 From Gemini code to textile art",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=gsjPR_qW618"
+  },
+  {
+    "video_id": "Gtv6ozZYPjY",
+    "title": "\u2728HOW TO\u2728 UPLOAD a Custom Shorts Thumbnail",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=Gtv6ozZYPjY"
+  },
+  {
+    "video_id": "q_PUWZ_SftQ",
+    "title": "Leverage new APIs with Gemini in Android Studio",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=q_PUWZ_SftQ"
+  },
+  {
+    "video_id": "8Xv5BLnXzgI",
+    "title": "\ud83e\uddfe Building a voice-to-print mirror with Gemini",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=8Xv5BLnXzgI"
+  },
+  {
+    "video_id": "979g7RzxCZE",
+    "title": "\u2728NEW\u2728 Collab with MORE Creators, Communities Updates, and more! #shortsroundup",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=979g7RzxCZE"
+  },
+  {
+    "video_id": "FQ1-KTQ30W8",
+    "title": "How to architect your app to support the expanding Android XR ecosystem",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=FQ1-KTQ30W8"
+  },
+  {
+    "video_id": "FVkp6tc2rNY",
+    "title": "\ud83e\ude84 Gemini Live API in action",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=FVkp6tc2rNY"
+  },
+  {
+    "video_id": "9ERP0dPQPN4",
+    "title": "Watch THE BRAND DEAL DESK LIVE FROM CANNES: Hide and Seek with Virgin Media O2 and The Sidemen.",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=9ERP0dPQPN4"
+  },
+  {
+    "video_id": "BveH7AOGSiQ",
+    "title": "Save time with Gemini\u2019s Agent Mode for API documentation",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=BveH7AOGSiQ"
+  },
+  {
+    "video_id": "M1q063UD-gw",
+    "title": "Manage your agents while you\u2019re on the move with the Antigravity Remote Control",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=M1q063UD-gw"
+  },
+  {
+    "video_id": "hTfYKYmWw6o",
+    "title": "New Ways to Manage Comments, Popular Music on Image Posts, and more! #shortsroundup \ud83d\uddde\ufe0f\u2728",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=hTfYKYmWw6o"
+  },
+  {
+    "video_id": "iRiX_AJZ6m0",
+    "title": "Shape the future of agentic Android development: Contribute to Android Bench",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=iRiX_AJZ6m0"
+  },
+  {
+    "video_id": "HyfhaGNVKUA",
+    "title": "Agentic approaches to processing long videos with Gemini",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=HyfhaGNVKUA"
+  },
+  {
+    "video_id": "uqyDJ_FxWfc",
+    "title": "HOW TO: Find Trending Sounds \ud83d\udd25\ud83c\udfb5",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=uqyDJ_FxWfc"
+  },
+  {
+    "video_id": "ST5oPxhk9rU",
+    "title": "Use Gemini 3.8 Flash for Android development",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=ST5oPxhk9rU"
+  },
+  {
+    "video_id": "qzLrKKjdsPU",
+    "title": "Build voice-first apps with Gemini 3.5 Transcribe",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=qzLrKKjdsPU"
+  },
+  {
+    "video_id": "i3a8oMot174",
+    "title": "YouTube Shopping Affiliate Program \ud83d\udecd\ufe0f",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=i3a8oMot174"
+  },
+  {
+    "video_id": "XMRGG280DJY",
+    "title": "Code locally with Gemma 4 in Android Studio",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=XMRGG280DJY"
+  },
+  {
+    "video_id": "Z8ycfJosB-o",
+    "title": "Build a live translation broadcast app with the Gemini Live API and LiveKit",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=Z8ycfJosB-o"
+  },
+  {
+    "video_id": "HfTNKS49KAM",
+    "title": "Content Tab in YouTube Studio \ud83d\udcf2",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=HfTNKS49KAM"
+  },
+  {
+    "video_id": "9fj41SO4Sik",
+    "title": "Improve your code with Android skills in Android Studio",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=9fj41SO4Sik"
+  },
+  {
+    "video_id": "sStb4mjP7RY",
+    "title": "What is Gemini 3.7 Flash?",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=sStb4mjP7RY"
+  },
+  {
+    "video_id": "HwxUp4EWTDw",
+    "title": "Update to YouTube Shorts Remix, NEW Live Countdown Sticker and more! #shortsroundup",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=HwxUp4EWTDw"
+  },
+  {
+    "video_id": "fpTi5iNRsuo",
+    "title": "Build apps for Wear OS 7 and the Pixel Watch 5",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=fpTi5iNRsuo"
+  },
+  {
+    "video_id": "Ujmx5PsT1IY",
+    "title": "3 things to know about the new CopilotKit integration for Angular",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=Ujmx5PsT1IY"
+  },
+  {
+    "video_id": "IliDySp8fDI",
+    "title": "Welcome to THE BRAND DEAL DESK",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=IliDySp8fDI"
+  },
+  {
+    "video_id": "4AM4hA1nRKc",
+    "title": "Optimize your Android app for the Pixel 11 Pro Fold",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=4AM4hA1nRKc"
+  },
+  {
+    "video_id": "bo4ebVkhp28",
+    "title": "Voice Agent observability with LangSmith \ud83c\udf1f",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=bo4ebVkhp28"
+  },
+  {
+    "video_id": "U1-ZH6NVQiQ",
+    "title": "Let's go to the mall! with @Kevin Stratvert",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=U1-ZH6NVQiQ"
+  },
+  {
+    "video_id": "R0TuZdjoQ84",
+    "title": "Rebuilding the Play Store with Jetpack Compose",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=R0TuZdjoQ84"
+  },
+  {
+    "video_id": "qwUM4Sk1_nE",
+    "title": "Which version of core ends up in your lockfile?",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=qwUM4Sk1_nE"
+  },
+  {
+    "video_id": "nKdKq4NX1tg",
+    "title": "Get Creative with YouTube Shorts Remix \ud83e\ude84",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=nKdKq4NX1tg"
+  },
+  {
+    "video_id": "WZ9ns8HcNiY",
+    "title": "Unbundling the Android Toolkit",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=WZ9ns8HcNiY"
+  },
+  {
+    "video_id": "8uncdjpygSU",
+    "title": "The documentary all devs would watch tbh\u2026",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=8uncdjpygSU"
+  },
+  {
+    "video_id": "NWcBelqTypI",
+    "title": "HOW TO: Add a Countdown to your Livestream \u23f1\ufe0f\ud83c\udf8a",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=NWcBelqTypI"
+  },
+  {
+    "video_id": "BQZZh8L1w_A",
+    "title": "How does GDE Pawan Kumar describe the future of Android?",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=BQZZh8L1w_A"
+  },
+  {
+    "video_id": "cBBWorSU0P4",
+    "title": "Building the ultimate morning dashboard with Gemini 3.6 Flash and Nano Banana",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=cBBWorSU0P4"
+  },
+  {
+    "video_id": "UXiWel59TMs",
+    "title": "Expanding Effect Maker, Higher Res Thumbnails & more #shortsroundup",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=UXiWel59TMs"
+  },
+  {
+    "video_id": "dq5LHtF709s",
+    "title": "From student to Android app developer, meet Pooja Bhaumik",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=dq5LHtF709s"
+  },
+  {
+    "video_id": "UUozyqDNRGg",
+    "title": "Does this install succeed? If it does, which three versions end up in your lockfile?",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=UUozyqDNRGg"
+  },
+  {
+    "video_id": "TWVvHEDzxB8",
+    "title": "Shopping Affiliate Eligibility Expansion \ud83d\udecd\ufe0f, Creator Voice Replies Update, and more! #shortsroundup",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=TWVvHEDzxB8"
+  },
+  {
+    "video_id": "HcMm-rk5xTI",
+    "title": "Rapid-fire: Jetpack Compose",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=HcMm-rk5xTI"
+  },
+  {
+    "video_id": "NIDrPjeZ-jQ",
+    "title": "PM vs. Eng",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=NIDrPjeZ-jQ"
+  },
+  {
+    "video_id": "CsoIfyjHjAY",
+    "title": "Unlock a new level of creativity with the ability to make effects that turn selfies into videos! \ud83c\udfac",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=CsoIfyjHjAY"
+  },
+  {
+    "video_id": "QuGzlRpS4Tw",
+    "title": "Develop Android XR apps for display glasses with Android Studio",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=QuGzlRpS4Tw"
+  },
+  {
+    "video_id": "eiRlCVtzlm4",
+    "title": "Expose your site's actions to AI agents using WebMCP",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=eiRlCVtzlm4"
+  },
+  {
+    "video_id": "M4huZrY1txo",
+    "title": "HOW TO: \u2728Reimagine\u2728 Shorts with Remix \ud83e\ude84",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=M4huZrY1txo"
+  },
+  {
+    "video_id": "bfqd9Y8jztk",
+    "title": "Is your Android app ready for foldable devices?",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=bfqd9Y8jztk"
+  },
+  {
+    "video_id": "T_YzKVRlRsQ",
+    "title": "Emojis in the username really do cause havoc, huh?",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=T_YzKVRlRsQ"
+  },
+  {
+    "video_id": "Ge0Xs3t4Ft4",
+    "title": "HOW TO: Add Objects when you Remix a Short \ud83e\ude84",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=Ge0Xs3t4Ft4"
+  },
+  {
+    "video_id": "CVj1lp2FplI",
+    "title": "Build Android apps with Gemini 3.6 Flash",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=CVj1lp2FplI"
+  },
+  {
+    "video_id": "iK-JE0ZbCfg",
+    "title": "Access all Gemini models with the Interactions API",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=iK-JE0ZbCfg"
+  },
+  {
+    "video_id": "_nQ6piIGzQ8",
+    "title": "HOW TO: Add Motion to your Photos in Shorts! \ud83d\udd7a",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=_nQ6piIGzQ8"
+  },
+  {
+    "video_id": "-VEpEm1l7HM",
+    "title": "Gemini 3.5 Flash-Lite: available for agentic Android development",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=-VEpEm1l7HM"
+  },
+  {
+    "video_id": "AaWdVp_py4Y",
+    "title": "What\u2019s going wrong with this Kotlin code?",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=AaWdVp_py4Y"
+  },
+  {
+    "video_id": "OpijRZZhwc8",
+    "title": "\u2728NEW\u2728 YouTube Create Expansion on iOS, Veo in Shorts, Nano Banana in Posts and more! #shortsroundup",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=OpijRZZhwc8"
+  },
+  {
+    "video_id": "azX5jb1R8bM",
+    "title": "Random and Anonymous Chat apps, and a Play Console Requirements",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=azX5jb1R8bM"
+  },
+  {
+    "video_id": "mgoNUC-tCAo",
+    "title": "Wait, what are we launching?",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=mgoNUC-tCAo"
+  },
+  {
+    "video_id": "bfFIcEvkuN8",
+    "title": "HOW TO: Manage and Filter Comments \ud83d\udcac",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=bfFIcEvkuN8"
+  },
+  {
+    "video_id": "TixoqVwSAxs",
+    "title": "3 ways to build augmented experiences for glasses",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=TixoqVwSAxs"
+  },
+  {
+    "video_id": "wjy2q43TsTk",
+    "title": "What are the new features in Android Studio Quail 2?",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=wjy2q43TsTk"
+  },
+  {
+    "video_id": "S5idfQ-LHxI",
+    "title": "\u2728NEW\u2728 In YouTube Create you can add IMAGES to your prompts to create videos using Veo!",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=S5idfQ-LHxI"
+  },
+  {
+    "video_id": "tU4ajHB96xA",
+    "title": "Fix memory leaks LeakCanary in Android Studio",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=tU4ajHB96xA"
+  },
+  {
+    "video_id": "Q1TfKyOcosk",
+    "title": "The harsh reality of coding \ud83d\udcbb",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=Q1TfKyOcosk"
+  },
+  {
+    "video_id": "SmBfQrqegiQ",
+    "title": "\u2728HOW TO\u2728 Add Images to Your Prompts with Veo on YouTube Shorts",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=SmBfQrqegiQ"
+  },
+  {
+    "video_id": "rJPFNj8ZhZw",
+    "title": "Multitask with Parallel Chats in Android Studio",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=rJPFNj8ZhZw"
+  },
+  {
+    "video_id": "Q3ryjp64wK8",
+    "title": "What\u2019s going wrong with this Kotlin code?",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=Q3ryjp64wK8"
+  },
+  {
+    "video_id": "9g7JMBq8Gkc",
+    "title": "HOW TO: Use Community Moderation Settings in YouTube Studio Mobile",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=9g7JMBq8Gkc"
+  },
+  {
+    "video_id": "I60lb-Utb-Q",
+    "title": "Build for the future of Android XR with new tools and features",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=I60lb-Utb-Q"
+  },
+  {
+    "video_id": "8ZCeXQyavog",
+    "title": "Whats your go-to prompting hack?",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=8ZCeXQyavog"
+  },
+  {
+    "video_id": "n90WpqNUT-0",
+    "title": "no tradeoffs \ud83d\udc3e @fuslie  stream across vertical and horizontal formats #sponsored",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=n90WpqNUT-0"
+  },
+  {
+    "video_id": "KLJlfPBtXcA",
+    "title": "Build 3D experiences using Jetpack XR (I/O Connect \u201826)",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=KLJlfPBtXcA"
+  },
+  {
+    "video_id": "ObomOeoP47Y",
+    "title": "How to vibe code Android apps",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=ObomOeoP47Y"
+  },
+  {
+    "video_id": "kElE5vEZscU",
+    "title": "creators like @Haley Kalil  can now automatically create a Short from their stream #sponsored",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=kElE5vEZscU"
+  },
+  {
+    "video_id": "z33FbkVjNUs",
+    "title": "Build for the wrist, the road, and the remote with Jetpack Compose and Gemini (I/O Connect '26)",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=z33FbkVjNUs"
+  },
+  {
+    "video_id": "Q4l3D0fI5dY",
+    "title": "Create clean LLM service interfaces with wrapper classes!",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=Q4l3D0fI5dY"
+  },
+  {
+    "video_id": "1WW76Rz4nqM",
+    "title": "HOW TO: Edit with AI in YouTube Shorts",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=1WW76Rz4nqM"
+  },
+  {
+    "video_id": "-1EqNWZ9bfs",
+    "title": "Developer insights: Building for Android XR with XREAL AURA",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=-1EqNWZ9bfs"
+  },
+  {
+    "video_id": "xDAn3tic3GI",
+    "title": "Any bug can be fixed\u2026 in a couple of days\u2026.",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=xDAn3tic3GI"
+  },
+  {
+    "video_id": "CxaqiDTzMSU",
+    "title": "Playables brings the vibes on vertical live. rolling out soon to all live creators #sponsored",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=CxaqiDTzMSU"
+  },
+  {
+    "video_id": "Jz7kcCnAO50",
+    "title": "What's new in Android Bench: 8 new models, new framework, and community contributions",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=Jz7kcCnAO50"
+  },
+  {
+    "video_id": "5MFWcubNvtM",
+    "title": "POV: You\u2019re at I/O Connect Berlin",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=5MFWcubNvtM"
+  },
+  {
+    "video_id": "Es7vtpPF69w",
+    "title": "Try \u2728VEO\u2728 in YouTube Shorts!",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=Es7vtpPF69w"
+  },
+  {
+    "video_id": "nDpWUtohOoI",
+    "title": "What I tried at I/O Connect: Android CLI",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=nDpWUtohOoI"
+  },
+  {
+    "video_id": "rRIMd4oAxig",
+    "title": "Ok, I guess the rain is asking us real questions now.",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=rRIMd4oAxig"
+  },
+  {
+    "video_id": "3j9qgrzk5g8",
+    "title": "\u2728NEW\u2728 Generative Effects, \ud83d\udde3\ufe0fSpeech-to-Song\ud83c\udfb5, and more! #shortsroundup",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=3j9qgrzk5g8"
+  },
+  {
+    "video_id": "S61cR6mYA1k",
+    "title": "Optimize your app performance for the next generation of Android (I/O Connect \u201826)",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=S61cR6mYA1k"
+  },
+  {
+    "video_id": "DjbUslfRLQw",
+    "title": "Describe what you do in 3 emojis",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=DjbUslfRLQw"
+  },
+  {
+    "video_id": "D1_NPEKvtRc",
+    "title": "\u2728NEW\u2728 Veo in YT Create",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=D1_NPEKvtRc"
+  },
+  {
+    "video_id": "9RXkKneSgYk",
+    "title": "Build high-quality Android apps with AI agents and Android CLI (I/O Connect '26)",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=9RXkKneSgYk"
+  },
+  {
+    "video_id": "wq8X9YrmooU",
+    "title": "What\u2019s happening in this Kotlin code?",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=wq8X9YrmooU"
+  },
+  {
+    "video_id": "DxZZoDb8j5M",
+    "title": "Visual Storytelling on YouTube w/ Lyor Cohen #YouTubeforArtists #Masterclass",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=DxZZoDb8j5M"
+  },
+  {
+    "video_id": "eYsrnHxTFlA",
+    "title": "Android at Google I/O Connect",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=eYsrnHxTFlA"
+  },
+  {
+    "video_id": "rU1za1SJSgE",
+    "title": "Stop writing longer prompts. Do this instead! \ud83e\udde0",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=rU1za1SJSgE"
+  },
+  {
+    "video_id": "zm82OLzVyNM",
+    "title": "Turn your reviews into revenue with YouTube Shopping",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=zm82OLzVyNM"
+  },
+  {
+    "video_id": "W9BWH8_HxgU",
+    "title": "What I tried at I/O Connect: AI coding assistant in Android Studio",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch3",
+    "channel_name": "Channel 3 \u2022 Daily Tech & EDC",
+    "yt_url": "https://www.youtube.com/watch?v=W9BWH8_HxgU"
+  },
+  {
+    "video_id": "qnl8-PBJNu4",
+    "title": "What caused this React app to crash?",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch1",
+    "channel_name": "Channel 1 \u2022 Smart Home & Kitchen",
+    "yt_url": "https://www.youtube.com/watch?v=qnl8-PBJNu4"
+  },
+  {
+    "video_id": "nP3EFLVRwHE",
+    "title": "Turn your content into cash with YouTube Shopping",
+    "amazon_url": "",
+    "yt_description": "",
+    "duration": "2:30",
+    "channel_id": "ch2",
+    "channel_name": "Channel 2 \u2022 Auto & Car Gadgets",
+    "yt_url": "https://www.youtube.com/watch?v=nP3EFLVRwHE"
+  }
+]
