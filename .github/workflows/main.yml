@@ -1,0 +1,46 @@
+name: High-Volume Dual-Queue Publisher
+
+on:
+  schedule:
+    - cron: '0 */4 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 1. Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 2. Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 3. Install Dependencies
+        run: pip install requests yt-dlp
+
+      - name: 4. Scan 4 Channels for New Uploads
+        run: python scan_all_channels.py --daily-new
+
+      - name: 5. Build All Webpages, Top 10 Guides & 6 Pinterest Feeds
+        run: python autopilot_generator.py
+
+      - name: 6. Save Updated Library & Counter
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add drip_state.json videos_library.json
+          git diff --staged --quiet || git commit -m "Auto-sync daily videos [skip ci]"
+          git push
+
+      - name: 7. Publish Website to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site_output
