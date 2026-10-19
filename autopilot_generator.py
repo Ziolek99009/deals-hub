@@ -219,7 +219,8 @@ def _enrich_one_real_video(v):
         return v
     try:
         headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
-        r = requests.get(f"https://www.youtube.com/watch?v={vid}", headers=headers, timeout=8)
+        cookies = {"SOCS": "CAISHAgBEhJnd3NfMjAyMzA4MTAtMF9SQzIaAmVuIAEaBgiAo_CmBg"}
+        r = requests.get(f"https://www.youtube.com/watch?v={vid}", headers=headers, cookies=cookies, timeout=8)
         m = re.search(r'"shortDescription":"((?:\\.|[^"\\])*)"', r.text)
         if m:
             raw_desc = json.loads('"' + m.group(1) + '"')
@@ -279,10 +280,13 @@ def load_videos_from_library(fallback_videos):
                         title = v.get("title", "Product Review")
                         dur = v.get("duration", "2:00")
                         ch_name = v.get("channel_name", "Channel 1")
-                        amz_u = v.get("amazon_url", "")
+                        q_fb = requests.utils.quote(clean_title_for_ebay(title))
+                        amz_u = v.get("amazon_url") or f"https://www.amazon.com/s?k={q_fb}&tag={CONFIG['amazon_tag']}"
                         desc = v.get("yt_description") or (
                             f"Product link: 🔗 Check it out: {amz_u} — Official Video Review & Specs for {title}."
                         )
+                        if "http" not in desc:
+                            desc = f"Product link: 🔗 Check it out: {amz_u} — {desc}"
                         trans = v.get("transcript_summary") or desc[:380]
                         enriched.append({
                             "video_id": v["video_id"],
@@ -826,6 +830,7 @@ const COUNTRIES = {countries_json};
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="OEZ1yHMJHa3Afl-ppdvuGMEYvrlnNJpAgwQpShdKLs8" />
 <title>Standalone Comparison Pages + 20k Video Pages Architecture</title>
 <style>
   :root {{
