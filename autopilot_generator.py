@@ -212,7 +212,7 @@ STANDALONE_COMPARISON_PAGES = [
 def _enrich_one_real_video(v):
     """Pulls the exact Amazon product link (e.g. amazon.com/dp/...?tag=ziolek-20
     or amzn.to/...) and full product description straight from your YouTube video!"""
-    if v.get("amazon_url") and v.get("yt_description"):
+    if v.get("amazon_url") and v.get("yt_description") and "http" in v.get("yt_description", ""):
         return v
     vid = v.get("video_id", "")
     if not vid:
@@ -230,11 +230,13 @@ def _enrich_one_real_video(v):
             )
             if amz:
                 v["amazon_url"] = amz.group(1)
-            clean_d = re.sub(r"https?://\S+", "", raw_desc).strip()
-            clean_d = re.sub(r"\s{2,}", " ", clean_d)
-            if clean_d:
-                v["yt_description"] = clean_d[:900]
-                v["transcript_summary"] = clean_d[:380]
+            full_desc = re.sub(r"\s{2,}", " ", raw_desc).strip()
+            clean_trans = re.sub(r"https?://\S+", "", raw_desc)
+            clean_trans = re.sub(r"\s{2,}", " ", clean_trans).strip()
+            if full_desc:
+                v["yt_description"] = full_desc[:950]
+            if clean_trans:
+                v["transcript_summary"] = clean_trans[:380]
     except Exception:
         pass
     return v
@@ -243,7 +245,7 @@ def _enrich_one_real_video(v):
 def load_videos_from_library(fallback_videos):
     """Automatically loads ONLY your real videos from your 4 YouTube channels
     inside videos_library.json, removes any initial demo videos, and extracts
-    the exact Amazon link & description from each YouTube video!"""
+    the exact Amazon link & description (with Amazon link included!) from each video!"""
     demo_ids = {"IBVmenOroPs", "dQw4w9WgXcQ", "ysz5S6PUM-U", "aqz-KE-bpKQ"}
     if os.path.exists("videos_library.json"):
         try:
@@ -257,10 +259,18 @@ def load_videos_from_library(fallback_videos):
                 ]
                 if real_only:
                     from concurrent.futures import ThreadPoolExecutor
-                    need_enrich = [v for v in real_only if not v.get("amazon_url") or not v.get("yt_description")][:250]
+                    need_enrich = [
+                        v for v in real_only
+                        if not v.get("amazon_url") or not v.get("yt_description")
+                    ][:250]
                     if need_enrich:
                         with ThreadPoolExecutor(max_workers=24) as ex:
                             list(ex.map(_enrich_one_real_video, need_enrich))
+                    for v in real_only:
+                        amz_u = v.get("amazon_url", "")
+                        desc_u = v.get("yt_description", "")
+                        if amz_u and amz_u not in desc_u:
+                            v["yt_description"] = f"Product link: 🔗 Check it out: {amz_u} — {desc_u}"
                     # Save cleaned & enriched library back to disk
                     with open("videos_library.json", "w", encoding="utf-8") as wf:
                         json.dump(real_only, wf, indent=2, ensure_ascii=False)
@@ -269,15 +279,15 @@ def load_videos_from_library(fallback_videos):
                         title = v.get("title", "Product Review")
                         dur = v.get("duration", "2:00")
                         ch_name = v.get("channel_name", "Channel 1")
+                        amz_u = v.get("amazon_url", "")
                         desc = v.get("yt_description") or (
-                            f"Official Video Review & Specs for {title}. Watch our {dur} hands-on video test above "
-                            f"and compare live availability across Amazon, 14 local eBay marketplaces, and AliExpress SuperDeals below."
+                            f"Product link: 🔗 Check it out: {amz_u} — Official Video Review & Specs for {title}."
                         )
                         trans = v.get("transcript_summary") or desc[:380]
                         enriched.append({
                             "video_id": v["video_id"],
                             "title": title,
-                            "amazon_url": v.get("amazon_url", ""),
+                            "amazon_url": amz_u,
                             "duration": dur,
                             "channel_id": v.get("channel_id", "ch1"),
                             "channel_name": ch_name,
@@ -667,6 +677,11 @@ def build_site():
             "🛒 Check Today's Price &amp; Reviews on Amazon (From Video Description) →</a>"
             if CONFIG.get("enable_amazon") else ""
         )
+        desc_with_link = re.sub(
+            r"(https?://\S+)",
+            r'<a href="\1" target="_blank" rel="nofollow sponsored noopener" style="color:#fbbf24;font-weight:800;text-decoration:underline;">\1</a>',
+            v.get("yt_description", ""),
+        )
 
         v_html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -694,8 +709,8 @@ def build_site():
       <iframe src="https://www.youtube.com/embed/{v['video_id']}" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allowfullscreen></iframe>
     </div>
     <div class="desc-box">
-      <strong>📋 YouTube Video Description &amp; Product Specs:</strong><br>
-      {v.get('yt_description', '')}
+      <strong>📋 YouTube Video Description &amp; Direct Amazon Product Link:</strong><br>
+      {desc_with_link}
     </div>
     <div class="trans-box">
       <strong>🎙️ 2–3 Min Spoken Video Review Summary:</strong><br>
@@ -1080,6 +1095,10 @@ function renderAll() {{
     const q = encodeURIComponent(v.ebay_keyword);
     const ebayUrl = `https://www.ebay.com/sch/i.html?_nkw=${{q}}&mkcid=1&mkrid=711-53200-19255-0&campid=${{ebayCampId}}&toolid=10001`;
     const amzUrl = v.amazon_url || `https://www.amazon.com/s?k=${{q}}&tag={CONFIG["amazon_tag"]}`;
+    const descHtml = (v.yt_description || '').replace(
+      /(https?:\/\/\S+)/g,
+      '<a href="$1" target="_blank" rel="nofollow sponsored noopener" style="color:#fbbf24;font-weight:800;text-decoration:underline;">$1</a>'
+    );
     return `
       <div class="card">
         <div>
@@ -1089,7 +1108,7 @@ function renderAll() {{
           </div>
           <h3><a href="videos/${{v.slug}}.html" style="color:#f8fafc;text-decoration:none;">${{v.title}}</a></h3>
           <div class="verdict-box" style="margin-top:8px; border-left-color:#3b82f6; background:rgba(59,130,246,0.12); color:#dbeafe;">
-            <strong>📋 YouTube Video Description &amp; Specs:</strong><br>${{v.yt_description}}
+            <strong>📋 YouTube Video Description &amp; Direct Amazon Product Link:</strong><br>${{descHtml}}
           </div>
           <div class="verdict-box" style="margin-top:8px;">
             <strong>🎙️ Spoken 2–3 Min Review Summary:</strong><br>${{v.transcript_summary}}
