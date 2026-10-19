@@ -9,12 +9,17 @@ import requests
 # =====================================================================
 def load_master_config():
     cfg = {
-        "site_domain": "https://your-site.pages.dev",
+        "site_domain": "https://global-tech-reviews.github.io/deals-hub",
         "enable_amazon": True,
-        "amazon_tag": "yourtag-20",
-        "one_aliexpress_link": "https://s.click.aliexpress.com/e/_dExampleLink",
-        "ebay_campaign_id": "5339000000",
-        "partner_id": "twoj-nick",
+        "amazon_tag": "ziolek-20",
+        "one_aliexpress_link": "https://s.click.aliexpress.com/e/_c3XFkIk1",
+        "ebay_campaign_id": "5339136480",
+        "pcloud_link": "https://partner.pcloud.com/r/158156",
+        "whop_link": "https://whop.com/deal-soldier?a=matiziolek",
+        "travel_link": "https://klook.tpo.lu/4aMl8BIT",
+        "gaming_link": "https://www.instant-gaming.com/?igr=gamer-a3e0a28",
+        "crypto_link": "https://www.tradingview.com/pricing/?share_your_love=matiziolek1993",
+        "partner_id": "ziolek",
         "last_auto_sync": datetime.now().strftime("%Y-%m-%d %H:%M UTC")
     }
     if os.path.exists("MY_SETTINGS.json"):
@@ -31,6 +36,17 @@ def load_master_config():
                 cfg["one_aliexpress_link"] = user_s["ALIEXPRESS_ONE_LINK"]
             if user_s.get("EBAY_CAMPID"):
                 cfg["ebay_campaign_id"] = str(user_s["EBAY_CAMPID"])
+            b = user_s.get("BONUS_PARTNER_LINKS", {})
+            if b.get("pcloud_or_vpn_link"):
+                cfg["pcloud_link"] = b["pcloud_or_vpn_link"]
+            if b.get("whop_ai_link"):
+                cfg["whop_link"] = b["whop_ai_link"]
+            if b.get("travelpayouts_link"):
+                cfg["travel_link"] = b["travelpayouts_link"]
+            if b.get("instant_gaming_link"):
+                cfg["gaming_link"] = b["instant_gaming_link"]
+            if b.get("ledger_crypto_link"):
+                cfg["crypto_link"] = b["ledger_crypto_link"]
         except Exception:
             pass
     return cfg
@@ -79,168 +95,244 @@ STANDALONE_COMPARISON_PAGES = [
             ["2-Year Promo Price", "$3.09 / month (-72% Off)", "$1.99 / month (-82% Off)"],
             ["Malware & Ad Blocker", "Built-in Threat Protection Pro", "CleanWeb 2.0 Included"]
         ],
-        "verdict": "Choose NordVPN if you want the fastest raw download speeds and built-in anti-malware scanning. Choose Surfshark if you want to share one account with your entire household on unlimited devices.",
-        "primary_btn_text": "Claim NordVPN 72% Discount + 3 Months Free →",
-        "primary_url": "https://nordvpn.com/special/",
-        "secondary_btn_text": "Claim Surfshark $1.99/mo Unlimited Devices Deal →",
-        "secondary_url": "https://surfshark.com/deals",
-        "pin_image": "https://i.ytimg.com/vi/IBVmenOroPs/hqdefault.jpg"
+        "verdict": "pCloud offers up to 10TB of Lifetime encrypted cloud storage with a 1-time payment—ideal for backing up 4K phone videos, dash cam footage, and PC files.",
+        "primary_btn_text": "☁️ Claim pCloud Lifetime Cloud Storage Discount →",
+        "primary_url": CONFIG["pcloud_link"],
+        "secondary_btn_text": "🔥 Join Deal Soldier Hidden Clearance Finder →",
+        "secondary_url": CONFIG["whop_link"],
+        "pin_image": "https://i.ytimg.com/vi/ufLlyxtUSCM/hqdefault.jpg"
     },
     {
         "slug": "hostinger-vs-bluehost-cloud-hosting-cost-calculator",
-        "category": "Web Hosting Standalone Page",
-        "seo_title": "Hostinger vs Bluehost (2026): Real 3-Year Cost & TTFB Speed Comparison",
-        "search_keywords": "hostinger vs bluehost, cheapest wordpress hosting 2026, hostinger coupon",
-        "payout_info": "Pays $60–$150 per sale (Impact / Direct)",
-        "winner_name": "Hostinger Business + AI Website Builder",
-        "runner_up_name": "Standard Shared Hosting",
+        "category": "Cloud Storage & Web Tools Standalone Page",
+        "seo_title": "pCloud Lifetime Storage vs Monthly Cloud Subscriptions: 5-Year Cost Calculator",
+        "search_keywords": "pcloud lifetime deal, best cloud backup for phone and pc, cloud storage calculator",
+        "payout_info": "High-Commission Partner Offer",
+        "winner_name": "pCloud Encrypted Lifetime Storage",
+        "runner_up_name": "Standard Monthly Cloud Plans",
         "table_rows": [
-            ["Server Technology", "LiteSpeed Enterprise + NVMe SSD", "Standard Apache Server"],
-            ["Free Domain & SSL", "✓ Free .com Domain + Unlimited SSL", "✓ 1st Year Only"],
-            ["Built-in AI Site Builder", "✓ Included Free (No Coding)", "Paid Add-on"],
-            ["Global Data Centers", "USA, UK, Germany, France, Lithuania, India, Brazil", "USA Only"],
-            ["Promo Starting Price", "$2.49 / month + 3 Months Free", "$3.95 / month"]
+            ["Payment Model", "1-Time Lifetime Payment", "$9.99–$19.99 Every Month Forever"],
+            ["Encryption & Security", "✓ Zero-Knowledge Client-Side Crypto", "Standard Server Storage"],
+            ["Automatic Phone & PC Sync", "✓ iOS, Android, Windows, macOS, Linux", "✓ Basic Sync"],
+            ["Video Streaming Support", "✓ Built-in HD Video & Audio Player", "Limited"]
         ],
-        "verdict": "Hostinger wins by a wide margin thanks to LiteSpeed NVMe servers, European & US data centers, and a built-in AI Website Builder included at $2.49/mo.",
-        "primary_btn_text": "Claim Hostinger $2.49/mo + Free Domain Deal →",
-        "primary_url": "https://www.hostinger.com/web-hosting",
-        "secondary_btn_text": "Explore PartnerStack AI Business Tools →",
-        "secondary_url": "https://partnerstack.com/marketplace",
-        "pin_image": "https://i.ytimg.com/vi/ysz5S6PUM-U/hqdefault.jpg"
+        "verdict": "Switching from monthly cloud fees to pCloud Lifetime pays for itself and gives instant access across all your phones, cameras, and PCs.",
+        "primary_btn_text": "☁️ Get pCloud Encrypted Cloud Storage →",
+        "primary_url": CONFIG["pcloud_link"],
+        "secondary_btn_text": "🎮 Check Today's 70%-Off PC Game Deals →",
+        "secondary_url": CONFIG["gaming_link"],
+        "pin_image": "https://i.ytimg.com/vi/XQHVIw_pfEs/hqdefault.jpg"
     },
     {
         "slug": "best-ai-automation-and-whop-digital-tools-comparison",
         "category": "AI & SaaS Recurring Standalone Page",
-        "seo_title": "Top AI Business Chatbots, SEO Writers & Whop Automation Tools (2026 Matrix)",
-        "search_keywords": "customgpt vs writesonic, best ai seo tool, whop top automation communities",
-        "payout_info": "Pays 30%–50% Every Single Month (PartnerStack & Whop)",
-        "winner_name": "CustomGPT.ai / Writesonic SEO Suite",
+        "seo_title": "Top AI Business Chatbots, Price-Error Finders & Whop Automation Tools (2026 Matrix)",
+        "search_keywords": "deal soldier whop, best price error discord, whop top automation communities",
+        "payout_info": "Pays 30%–50% Every Single Month (Whop)",
+        "winner_name": "Deal Soldier Clearance & Price-Error Radar",
         "runner_up_name": "Whop Top-Rated AI & Trading Tools",
         "table_rows": [
-            ["Primary Use Case", "Train AI on Your Own Website/Docs", "All-in-One AI & Digital Apps"],
-            ["Free Trial Available", "✓ 7-Day Free Trial", "✓ Instant Access Tiers"],
-            ["API & Webhook Support", "✓ Full REST API Included", "✓ Discord / Telegram / Web Apps"],
-            ["languages Supported", "92+ Languages Automatically", "Global Multi-Language"]
+            ["Primary Use Case", "80%-Off Retail & Online Price Errors", "All-in-One AI & Digital Apps"],
+            ["Instant Access", "✓ Real-Time Deal Alerts", "✓ Instant Access Tiers"],
+            ["Platform Support", "✓ Mobile & Desktop Alerts", "✓ Discord / Telegram / Web Apps"],
+            ["Coverage", "Amazon, Walmart, BestBuy & Online Stores", "Global Multi-Language"]
         ],
         "verdict": "Deal Soldier finds hidden 80%-off retail & Amazon price errors, while Whop Discover gives instant access to top-rated AI and automation apps.",
         "primary_btn_text": "🔥 Join Deal Soldier Hidden Clearance & Price-Error Finder →",
-        "primary_url": "https://whop.com/deal-soldier?a=matiziolek",
+        "primary_url": CONFIG["whop_link"],
         "secondary_btn_text": "🤖 Browse Trending AI & Digital Apps on Whop →",
         "secondary_url": "https://whop.com/discover/?a=matiziolek",
-        "pin_image": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg"
+        "pin_image": "https://i.ytimg.com/vi/K-zPTkSAuCA/hqdefault.jpg"
     },
     {
         "slug": "ledger-nano-x-vs-stax-crypto-wallet-and-exchange-fees",
         "category": "Crypto & Finance Standalone Page",
-        "seo_title": "Ledger Nano X vs Ledger Stax + Crypto Exchange Fee Calculator (2026)",
-        "search_keywords": "ledger nano x vs stax, cheapest crypto hardware wallet, tradingview pro discount",
-        "payout_info": "Pays 15% per Wallet + 30%–50% Lifetime Fee Share",
-        "winner_name": "Ledger Nano X (Bluetooth Cold Wallet)",
-        "runner_up_name": "TradingView Pro Charting Suite",
+        "seo_title": "TradingView Pro Charting Suite vs Standard Market Trackers (2026 Comparison)",
+        "search_keywords": "tradingview pro discount, best stock and crypto charting tool, tradingview referral bonus",
+        "payout_info": "Official Partner Referral Bonus",
+        "winner_name": "TradingView Pro Multi-Chart Suite",
+        "runner_up_name": "Basic Exchange Charts",
         "table_rows": [
-            ["Security Certification", "CC EAL5+ Secure Element Chip", "Cloud Multi-Chart Alerts"],
-            ["Mobile App Support", "✓ iOS & Android via Bluetooth", "✓ iOS, Android & Desktop"],
-            ["Supported Coins/Tokens", "5,500+ Coins & NFTs", "All Global Crypto, Stocks & Forex"],
-            ["Backup & Recovery", "24-Word Offline Seed Phrase", "Server-Side Alert Webhooks"]
+            ["Custom Indicators & Alerts", "✓ 400+ Built-in + 100,000+ Pine Scripts", "Basic Moving Averages Only"],
+            ["Mobile & Desktop App", "✓ Syncs Across iOS, Android & Web", "✓ Basic App"],
+            ["Markets Covered", "All Global Crypto, Stocks, ETFs & Forex", "Single Exchange Only"],
+            ["Server-Side Alerts", "✓ SMS, Email & Webhook Push Alerts", "Manual Refresh"]
         ],
-        "verdict": "Never leave funds on an exchange—Ledger Nano X secures 5,500+ assets offline, while TradingView Pro handles real-time technical alerts.",
+        "verdict": "TradingView Pro handles real-time technical alerts across all global stocks, forex, and crypto markets.",
         "primary_btn_text": "📈 Claim TradingView Pro Discount + $15 Bonus →",
-        "primary_url": "https://www.tradingview.com/pricing/?share_your_love=matiziolek1993",
-        "secondary_btn_text": "🛡️ Order Official Ledger Hardware Wallet Direct →",
-        "secondary_url": "https://shop.ledger.com/",
-        "pin_image": "https://i.ytimg.com/vi/aqz-KE-bpKQ/hqdefault.jpg"
+        "primary_url": CONFIG["crypto_link"],
+        "secondary_btn_text": "☁️ Secure Your Files on pCloud →",
+        "secondary_url": CONFIG["pcloud_link"],
+        "pin_image": "https://i.ytimg.com/vi/SynX1yF7ijo/hqdefault.jpg"
     },
     {
         "slug": "anbernic-rg35xx-sp-vs-miyoo-mini-plus-retro-handheld-guide",
-        "category": "AliExpress & eBay Bestseller Standalone Page",
-        "seo_title": "Anbernic RG35XX SP vs Miyoo Mini Plus: Specs, Emulators & Cheapest Price",
-        "search_keywords": "anbernic rg35xx sp vs miyoo mini plus, best retro handheld under 50, aliexpress retro console",
-        "payout_info": "Pays 7%–9% AliExpress + eBay Partner Network (14 Countries)",
+        "category": "AliExpress, eBay & Instant-Gaming Bestseller Page",
+        "seo_title": "Anbernic RG35XX SP vs Miyoo Mini Plus + Best PC Game Deals (2026)",
+        "search_keywords": "anbernic rg35xx sp vs miyoo mini plus, instant gaming steam keys, aliexpress retro console",
+        "payout_info": "AliExpress + eBay (14 Countries) + Instant-Gaming",
         "winner_name": "Anbernic RG35XX SP (Clamshell Flip)",
-        "runner_up_name": "Beelink SER8 Ryzen 7 Mini PC",
+        "runner_up_name": "Instant-Gaming 70%-Off PC Steam Keys",
         "table_rows": [
-            ["Screen", "3.5-inch IPS (640x480) OCA Laminated", "Supports Triple 4K@144Hz Monitors"],
-            ["Systems Supported", "PS1, PSP, Dreamcast, N64, GBA, SNES", "Steam PC Games, PS3/Switch Emulation"],
-            ["Connectivity", "WiFi 5, Bluetooth 4.2, HDMI TV Out", "WiFi 6, Dual USB4, 2.5G LAN"],
-            ["Battery / Power", "3300mAh (8 Hours Gameplay)", "65W Silent Vapor Chamber"]
+            ["Screen / Platform", "3.5-inch IPS OCA Laminated", "Official Steam / EA / Ubisoft PC Keys"],
+            ["Systems Supported", "PS1, PSP, Dreamcast, N64, GBA, SNES", "Instant Digital Key Delivery"],
+            ["Connectivity", "WiFi 5, Bluetooth 4.2, HDMI TV Out", "Works on Steam Deck & Gaming PCs"],
+            ["Average Discount", "Up to 60% Off Retail on AliExpress", "Up to 80% Off Retail Game Prices"]
         ],
-        "verdict": "Both are massive viral bestsellers on AliExpress Choice and eBay with 50% lower prices than domestic retail.",
+        "verdict": "Pair factory-direct handheld gaming hardware on AliExpress and eBay with up to 80%-off PC game keys on Instant-Gaming.",
         "primary_btn_text": "🔥 Get 60% Off Retro Handhelds on AliExpress →",
         "primary_url": CONFIG["one_aliexpress_link"],
-        "secondary_btn_text": "🔍 Compare Fast-Ship Listings on eBay →",
-        "secondary_url": f"https://www.ebay.com/sch/i.html?_nkw=Anbernic+RG35XX+SP&mkcid=1&mkrid=711-53200-19255-0&campid={CONFIG['ebay_campaign_id']}&toolid=10001",
-        "pin_image": "https://i.ytimg.com/vi/jNQXAC9IVRw/hqdefault.jpg"
+        "secondary_btn_text": "🎮 Get Up to 80% Off PC Steam Keys on Instant-Gaming →",
+        "secondary_url": CONFIG["gaming_link"],
+        "pin_image": "https://i.ytimg.com/vi/llbJ8uWjfjk/hqdefault.jpg"
     },
     {
         "slug": "cheapest-flight-error-fares-and-hotel-deal-finder",
-        "category": "Travel Affiliate Standalone Page",
-        "seo_title": "How to Find Hidden Flight Error Fares & 50%-Off Last-Minute Hotels (2026)",
-        "search_keywords": "flight error fares 2026, cheapest hotel booking aggregator, travelpayouts deals",
-        "payout_info": "Pays $15–$50 per Booking (Travelpayouts / Booking / Aviasales)",
-        "winner_name": "Travelpayouts Flight & Hotel Radar",
+        "category": "Travel & Klook Tours Standalone Page",
+        "seo_title": "How to Book Discounted Klook Attractions, Hotels & Travel Gear (2026)",
+        "search_keywords": "klook promo deals, cheapest hotel and attraction tickets, travel gadget essentials",
+        "payout_info": "Travelpayouts / Klook Official Partner",
+        "winner_name": "Klook Global Tours, Rail Passes & Hotels",
         "runner_up_name": "Travel Gadget Essentials (AliExpress / eBay)",
         "table_rows": [
-            ["Airlines & Hotels Scanned", "728 Airlines + 2M+ Hotels Worldwide", "Factory-Direct Travel Adapters & Bags"],
-            ["Hidden City & Flexible Dates", "✓ Full Calendar Price Matrix", "✓ 65W GaN Universal Chargers"],
-            ["Cashback / Discounts", "Up to 50% Off Last-Minute Rooms", "Up to 60% Off Retail Luggage Gear"]
+            ["Destinations Covered", "2,700+ Destinations & 500,000+ Activities", "Factory-Direct Travel Adapters & Bags"],
+            ["Skip-the-Line Tickets", "✓ Instant QR Code Mobile Vouchers", "✓ 65W GaN Universal Chargers"],
+            ["Member Discounts", "Up to 50% Off Attractions & Hotels", "Up to 60% Off Retail Luggage Gear"]
         ],
-        "verdict": "Combine flight calendar matrix searches with lightweight travel gear for maximum savings on every trip.",
-        "primary_btn_text": "Search Live Flight & Hotel Error Fares →",
-        "primary_url": "https://www.travelpayouts.com/",
-        "secondary_btn_text": "Shop 60%-Off Travel Gadgets on AliExpress →",
+        "verdict": "Book skip-the-line attraction passes, rail tickets, and hotels via Klook and pair them with factory-direct travel gear.",
+        "primary_btn_text": "✈️ Explore Discounted Hotels, Rail & Tours on Klook →",
+        "primary_url": CONFIG["travel_link"],
+        "secondary_btn_text": "🔥 Shop 60%-Off Travel Gadgets on AliExpress →",
         "secondary_url": CONFIG["one_aliexpress_link"],
-        "pin_image": "https://i.ytimg.com/vi/9bZkp7q19f0/hqdefault.jpg"
+        "pin_image": "https://i.ytimg.com/vi/TdHQYsqX3AE/hqdefault.jpg"
     }
 ]
 
+
+def _enrich_one_real_video(v):
+    """Pulls the exact Amazon product link (e.g. amazon.com/dp/...?tag=ziolek-20
+    or amzn.to/...) and full product description straight from your YouTube video!"""
+    if v.get("amazon_url") and v.get("yt_description"):
+        return v
+    vid = v.get("video_id", "")
+    if not vid:
+        return v
+    try:
+        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
+        r = requests.get(f"https://www.youtube.com/watch?v={vid}", headers=headers, timeout=8)
+        m = re.search(r'"shortDescription":"((?:\\.|[^"\\])*)"', r.text)
+        if m:
+            raw_desc = json.loads('"' + m.group(1) + '"')
+            amz = re.search(
+                r"(https?://(?:www\.)?(?:amzn\.to|a\.co|amazon\.[a-z\.]+)/[^\s\)\"\]]+)",
+                raw_desc,
+                re.I,
+            )
+            if amz:
+                v["amazon_url"] = amz.group(1)
+            clean_d = re.sub(r"https?://\S+", "", raw_desc).strip()
+            clean_d = re.sub(r"\s{2,}", " ", clean_d)
+            if clean_d:
+                v["yt_description"] = clean_d[:900]
+                v["transcript_summary"] = clean_d[:380]
+    except Exception:
+        pass
+    return v
+
+
+def load_videos_from_library(fallback_videos):
+    """Automatically loads ONLY your real videos from your 4 YouTube channels
+    inside videos_library.json, removes any initial demo videos, and extracts
+    the exact Amazon link & description from each YouTube video!"""
+    demo_ids = {"IBVmenOroPs", "dQw4w9WgXcQ", "ysz5S6PUM-U", "aqz-KE-bpKQ"}
+    if os.path.exists("videos_library.json"):
+        try:
+            with open("videos_library.json", "r", encoding="utf-8") as f:
+                lib = json.load(f)
+            if isinstance(lib, list) and len(lib) > 0:
+                real_only = [
+                    v for v in lib
+                    if "•" not in v.get("channel_name", "")
+                    and v.get("video_id") not in demo_ids
+                ]
+                if real_only:
+                    from concurrent.futures import ThreadPoolExecutor
+                    need_enrich = [v for v in real_only if not v.get("amazon_url") or not v.get("yt_description")][:250]
+                    if need_enrich:
+                        with ThreadPoolExecutor(max_workers=24) as ex:
+                            list(ex.map(_enrich_one_real_video, need_enrich))
+                    # Save cleaned & enriched library back to disk
+                    with open("videos_library.json", "w", encoding="utf-8") as wf:
+                        json.dump(real_only, wf, indent=2, ensure_ascii=False)
+                    enriched = []
+                    for v in real_only:
+                        title = v.get("title", "Product Review")
+                        dur = v.get("duration", "2:00")
+                        ch_name = v.get("channel_name", "Channel 1")
+                        desc = v.get("yt_description") or (
+                            f"Official Video Review & Specs for {title}. Watch our {dur} hands-on video test above "
+                            f"and compare live availability across Amazon, 14 local eBay marketplaces, and AliExpress SuperDeals below."
+                        )
+                        trans = v.get("transcript_summary") or desc[:380]
+                        enriched.append({
+                            "video_id": v["video_id"],
+                            "title": title,
+                            "amazon_url": v.get("amazon_url", ""),
+                            "duration": dur,
+                            "channel_id": v.get("channel_id", "ch1"),
+                            "channel_name": ch_name,
+                            "yt_description": desc,
+                            "transcript_summary": trans,
+                            "yt_url": f"https://www.youtube.com/watch?v={v['video_id']}"
+                        })
+                    return enriched
+        except Exception:
+            pass
+    return fallback_videos
+
 # =====================================================================
-# 4. YOUR 2-3 MINUTE PRODUCT REVIEW VIDEOS
-#    (Includes BOTH the Full YouTube Video Description AND Spoken Transcript!)
+# 4. YOUR REAL PRODUCT REVIEW VIDEOS FROM YOUR 4 CHANNELS
 # =====================================================================
 MULTI_CHANNEL_VIDEOS = [
     {
-        "video_id": "IBVmenOroPs",
-        "title": "Smart Countertop Ice Maker Nugget Ice Machine — 3 Min Review",
-        "duration": "2:48",
-        "channel_name": "Channel 1 • Smart Home & Kitchen",
-        "yt_description": "Official Video Description & Specs: Countertop Nugget Ice Maker producing 34 lbs of chewable pellet ice per 24 hours. Features 1.8L water tank, infrared ice-full sensor, low-water indicator, and 1-touch automatic self-cleaning cycle. Dimensions: 11.3 x 8.6 x 12.6 inches. [See Deal Buttons Above for Worldwide Pricing]",
-        "transcript_summary": "In this 2m 48s review, we test how fast the Smart Countertop Ice Maker makes chewable nugget ice (first batch in 6 mins, 34 lbs/day), measure noise at 42 dB, and test 1-button self-cleaning.",
-        "key_takeaways": ["First batch in 6–7 minutes", "Quiet 42 dB compressor", "1-button self-cleaning mode"],
-        "related_compare_slug": "anbernic-rg35xx-sp-vs-miyoo-mini-plus-retro-handheld-guide",
-        "yt_url": "https://www.youtube.com/watch?v=IBVmenOroPs"
+        "video_id": "ufLlyxtUSCM",
+        "title": "Frigidaire Steam Espresso Maker Review",
+        "amazon_url": "https://www.amazon.com/dp/B0CXTJPCMD?tag=ziolek-20",
+        "duration": "1:33",
+        "channel_name": "Channel 1",
+        "yt_description": "Endless Espresso Creations: Enjoy barista-quality specialty coffee drinks at home with this user-friendly espresso maker and built-in steam wand.",
+        "transcript_summary": "Hands-on 1:33 review of the Frigidaire Steam Espresso Maker testing espresso extraction, steam wand frothing, and countertop footprint.",
+        "yt_url": "https://www.youtube.com/watch?v=ufLlyxtUSCM"
     },
     {
-        "video_id": "dQw4w9WgXcQ",
-        "title": "Cordless Handheld Car Vacuum Cleaner 16000Pa Brushless Review",
-        "duration": "2:35",
-        "channel_name": "Channel 2 • Auto & Car Gadgets",
-        "yt_description": "Official Video Description & Specs: 2-in-1 Brushless 16,000Pa Cordless Car Vacuum & Compressed Air Duster. Includes crevice nozzle, brush head, washable stainless + HEPA dual filter, and 6000mAh USB-C fast-charge battery. Weight: 0.85 lbs. [See Deal Buttons Above for Worldwide Pricing]",
-        "transcript_summary": "In this 2m 35s review, we test 16,000Pa brushless suction on car mats and seat crevices, plus test the reverse compressed-air blower attachment and USB-C battery runtime.",
-        "key_takeaways": ["16,000Pa vacuum + air duster blower", "Washable steel + HEPA filter", "30-min runtime via USB-C"],
-        "related_compare_slug": "cheapest-flight-error-fares-and-hotel-deal-finder",
-        "yt_url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        "video_id": "XQHVIw_pfEs",
+        "title": "Santevia MINA Alkaline Water Filter Pitcher | 9-Cup Water Filter System",
+        "amazon_url": "https://amzn.to/4gF8RFx",
+        "duration": "1:33",
+        "channel_name": "Channel 4",
+        "yt_description": "Santevia MINA Alkaline Water Filter Pitcher — 9-Cup water filtration system that reduces chlorine and adds essential minerals.",
+        "transcript_summary": "Hands-on 1:33 review of the Santevia MINA 9-Cup Alkaline Water Filter Pitcher testing filtration speed, mineral restoration, and fridge fit.",
+        "yt_url": "https://www.youtube.com/watch?v=XQHVIw_pfEs"
     },
     {
-        "video_id": "ysz5S6PUM-U",
-        "title": "Magnetic 3-in-1 Foldable Travel Wireless Charging Station Test",
-        "duration": "2:19",
-        "channel_name": "Channel 3 • Daily Tech & EDC",
-        "yt_description": "Official Video Description & Specs: 15W Qi2 / MagSafe Compatible 3-in-1 Foldable Travel Charger for Phone, Smart Watch (5W), and Wireless Earbuds (5W). Folds to 0.6 inches thick, includes 30W PD USB-C adapter and braided cable. [See Deal Buttons Above for Worldwide Pricing]",
-        "transcript_summary": "In this 2m 19s test, we measure real wattage across the 15W magnetic phone pad, Watch fast charger, and earbuds pad, and show how it folds into a pocket travel case.",
-        "key_takeaways": ["Charges 3 devices with 1 USB-C cable", "Strong N52 magnetic stand mode", "Folds flat for travel"],
-        "related_compare_slug": "nordvpn-vs-surfshark-speed-and-price-comparison",
-        "yt_url": "https://www.youtube.com/watch?v=ysz5S6PUM-U"
+        "video_id": "K-zPTkSAuCA",
+        "title": "Softan Kids Bed Sheet Set Review",
+        "amazon_url": "https://www.amazon.com/dp/B099RCZ844?tag=ziolek-20",
+        "duration": "2:04",
+        "channel_name": "Channel 3",
+        "yt_description": "Softan Microfiber Kids Bed Sheet Set — breathable, deep-pocket fitted sheet with fade-resistant patterns and machine-washable durability.",
+        "transcript_summary": "Hands-on 2:04 review of the Softan Kids Bed Sheet Set testing fabric softness, deep pocket mattress fit, and wash durability.",
+        "yt_url": "https://www.youtube.com/watch?v=K-zPTkSAuCA"
     },
     {
-        "video_id": "aqz-KE-bpKQ",
-        "title": "Under Desk Treadmill Walking Pad 2.5HP Quiet Motor Review",
-        "duration": "3:04",
-        "channel_name": "Channel 4 • Office & Desk Setup",
-        "yt_description": "Official Video Description & Specs: 2.5HP Under-Desk Walking Pad Treadmill with 5-layer non-slip running belt, 8 silicone shock absorbers, remote speed control (0.6–3.8 MPH), and 265 lb capacity. Built-in transport wheels fit under sofas and beds. [See Deal Buttons Above for Worldwide Pricing]",
-        "transcript_summary": "In this 3m 04s review, we test the 2.5HP brushless walking pad from 0.6 to 3.8 mph at a standing desk, check shock absorption, and roll it under a sofa.",
-        "key_takeaways": ["Zero assembly out of the box", "LED speed/distance/calorie display", "4.5-inch height fits under couches"],
-        "related_compare_slug": "hostinger-vs-bluehost-cloud-hosting-cost-calculator",
-        "yt_url": "https://www.youtube.com/watch?v=aqz-KE-bpKQ"
+        "video_id": "SynX1yF7ijo",
+        "title": "COMAN M1pro 65 Carbon Fiber Monopod for Camera Review",
+        "amazon_url": "https://www.amazon.com/dp/B0FCY4SX8D?tag=ziolek-20",
+        "duration": "1:46",
+        "channel_name": "Channel 2",
+        "yt_description": "COMAN M1pro 65-Inch Carbon Fiber Camera Monopod with foldable three-feet support base, quick-release plate, and lightweight travel build.",
+        "transcript_summary": "Hands-on 1:46 review of the COMAN M1pro 65 Carbon Fiber Monopod testing stability, quick-release lock, and travel weight.",
+        "yt_url": "https://www.youtube.com/watch?v=SynX1yF7ijo"
     }
 ]
 
@@ -248,6 +340,8 @@ MULTI_CHANNEL_VIDEOS = [
 def fetch_live_game_deals():
     deals = []
     seen_ids = set()
+    ig_base = CONFIG.get("gaming_link", "https://www.instant-gaming.com/?igr=gamer-a3e0a28")
+    ig_tag = ig_base.split("igr=")[-1] if "igr=" in ig_base else "gamer-a3e0a28"
     try:
         url = "https://store.steampowered.com/api/featuredcategories?cc=us&l=en"
         resp = requests.get(url, timeout=10)
@@ -267,13 +361,13 @@ def fetch_live_game_deals():
                         "old_price": orig,
                         "price": final,
                         "discount_pct": disc,
-                        "store": "Humble Bundle / Fanatical / Eneba",
+                        "store": "Instant-Gaming / Official Steam Key",
                         "trailer_url": f"https://www.youtube.com/results?search_query={q_name}+gameplay+trailer",
-                        "base_url": f"https://www.humblebundle.com/store/search?search={q_name}"
+                        "base_url": f"https://www.instant-gaming.com/en/search/?q={q_name}&igr={ig_tag}"
                     })
     except Exception:
         pass
-    return sorted(deals, key=lambda x: x["discount_pct"], reverse=True)[:6]
+    return sorted(deals, key=lambda x: x["discount_pct"], reverse=True)[:8]
 
 
 def slugify(text):
@@ -347,7 +441,7 @@ def build_standalone_comparison_files():
       </thead>
       <tbody>{rows_html}</tbody>
     </table>
-    <a class="btn btn-1" href="{p['primary_url']}?ref={CONFIG['partner_id']}" target="_blank" rel="nofollow sponsored noopener">{p['primary_btn_text']}</a>
+    <a class="btn btn-1" href="{p['primary_url']}" target="_blank" rel="nofollow sponsored noopener">{p['primary_btn_text']}</a>
     <a class="btn btn-2" href="{p['secondary_url']}" target="_blank" rel="nofollow sponsored noopener">{p['secondary_btn_text']}</a>
     <p style="margin-top:18px;font-size:11.5px;color:#64748b;text-align:center;">Affiliate Disclosure: We may earn a commission when you purchase through links on this page at no extra cost to you.</p>
   </div>
@@ -484,14 +578,24 @@ def ping_indexnow(urls_to_ping):
         pass
 
 
+def xml_esc(s):
+    return str(s or "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
+
+
 def build_site():
     os.makedirs("site_output", exist_ok=True)
     os.makedirs("site_output/videos", exist_ok=True)
+    all_source_videos = load_videos_from_library(MULTI_CHANNEL_VIDEOS)
     enriched_videos = []
-    for v in MULTI_CHANNEL_VIDEOS:
+    used_slugs = set()
+    for v in all_source_videos:
         item = dict(v)
         item["ebay_keyword"] = clean_title_for_ebay(v["title"])
-        item["slug"] = slugify(v["title"])
+        base_slug = slugify(v["title"])
+        if base_slug in used_slugs:
+            base_slug = f"{base_slug}-{v['video_id'][:6].lower()}"
+        used_slugs.add(base_slug)
+        item["slug"] = base_slug
         enriched_videos.append(item)
 
     live_games = fetch_live_game_deals()
@@ -512,10 +616,10 @@ def build_site():
         thumb_url = f"https://i.ytimg.com/vi/{v['video_id']}/hqdefault.jpg"
 
         video_rss_entries += f"""    <item>
-      <title>{v['title']}</title>
+      <title>{xml_esc(v['title'])}</title>
       <link>{canonical_url}</link>
       <guid isPermaLink="true">{canonical_url}</guid>
-      <description>{v.get('transcript_summary', '')}</description>
+      <description>{xml_esc(v.get('transcript_summary', ''))}</description>
       <enclosure url="{thumb_url}" length="15000" type="image/jpeg" />
     </item>\n"""
 
@@ -557,6 +661,12 @@ def build_site():
             f"<li style='margin-bottom:6px;'><a href='../best/{bc['slug']}.html' style='color:#34d399;text-decoration:none;'>🏆 {bc['title']}</a></li>"
             for bc in best_categories
         ])
+        amz_href = v.get("amazon_url") or ("https://www.amazon.com/s?k=" + q + "&tag=" + CONFIG["amazon_tag"])
+        amz_btn_html = (
+            f'<a class="btn" style="background:#f59e0b;color:#0f172a;" href="{amz_href}" target="_blank" rel="nofollow sponsored noopener">'
+            "🛒 Check Today's Price &amp; Reviews on Amazon (From Video Description) →</a>"
+            if CONFIG.get("enable_amazon") else ""
+        )
 
         v_html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -591,7 +701,7 @@ def build_site():
       <strong>🎙️ 2–3 Min Spoken Video Review Summary:</strong><br>
       {v.get('transcript_summary', '')}
     </div>
-    {f'<a class="btn" style="background:#f59e0b;color:#0f172a;" href="{v.get("amazon_url") or ("https://www.amazon.com/s?k=" + q + "&tag=" + CONFIG["amazon_tag"])}" target="_blank" rel="nofollow sponsored noopener">🛒 Check Today\'s Price &amp; Reviews on Amazon (From Video Description) →</a>' if CONFIG.get("enable_amazon") else ''}
+    {amz_btn_html}
     <a class="btn" id="localEbayBtn" style="background:#3b82f6;" href="{default_ebay}" target="_blank" rel="nofollow sponsored noopener">🔍 Compare "{v['ebay_keyword']}" on Your Local eBay Store →</a>
     <a class="btn" style="background:#f97316;" href="{CONFIG['one_aliexpress_link']}" target="_blank" rel="nofollow sponsored noopener">🔥 Check 60%-Off AliExpress SuperDeals →</a>
     <a class="btn" style="background:#ef4444;" href="{v['yt_url']}" target="_blank" rel="noopener">▶ Watch on YouTube</a>
@@ -673,11 +783,11 @@ const COUNTRIES = {countries_json};
         c_url = f"{CONFIG['site_domain']}/videos/{v['slug']}.html"
         t_url = f"https://i.ytimg.com/vi/{v['video_id']}/hqdefault.jpg"
         vault_items += f"""    <item>
-      <title>{v['title']}</title>
+      <title>{xml_esc(v['title'])}</title>
       <link>{c_url}</link>
       <guid isPermaLink="true">{c_url}</guid>
       <pubDate>{pub_date_now}</pubDate>
-      <description>{v.get('transcript_summary', '')}</description>
+      <description>{xml_esc(v.get('transcript_summary', ''))}</description>
       <enclosure url="{t_url}" length="15000" type="image/jpeg" />
     </item>\n"""
 
@@ -959,8 +1069,8 @@ function renderAll() {{
           <div class="verdict-box"><strong>Verdict:</strong> ${{p.verdict}}</div>
         </div>
         <div>
-          <a class="btn btn-green" href="${{p.primary_url}}?ref=${{partnerId}}" target="_blank" rel="noopener">${{p.primary_btn_text}}</a>
-          <a class="btn btn-purple" href="${{p.secondary_url}}" target="_blank" rel="noopener">${{p.secondary_btn_text}}</a>
+          <a class="btn btn-green" href="${{p.primary_url}}" target="_blank" rel="nofollow sponsored noopener">${{p.primary_btn_text}}</a>
+          <a class="btn btn-purple" href="${{p.secondary_url}}" target="_blank" rel="nofollow sponsored noopener">${{p.secondary_btn_text}}</a>
         </div>
       </div>
     `;
@@ -969,6 +1079,7 @@ function renderAll() {{
   document.getElementById('videoGrid').innerHTML = VIDEOS.map(v => {{
     const q = encodeURIComponent(v.ebay_keyword);
     const ebayUrl = `https://www.ebay.com/sch/i.html?_nkw=${{q}}&mkcid=1&mkrid=711-53200-19255-0&campid=${{ebayCampId}}&toolid=10001`;
+    const amzUrl = v.amazon_url || `https://www.amazon.com/s?k=${{q}}&tag={CONFIG["amazon_tag"]}`;
     return `
       <div class="card">
         <div>
@@ -976,18 +1087,20 @@ function renderAll() {{
             <span class="pill-purple">${{v.channel_name}} (${{v.duration}})</span>
             <span class="pill">14 Country Editions</span>
           </div>
-          <h3>${{v.title}}</h3>
+          <h3><a href="videos/${{v.slug}}.html" style="color:#f8fafc;text-decoration:none;">${{v.title}}</a></h3>
           <div class="verdict-box" style="margin-top:8px; border-left-color:#3b82f6; background:rgba(59,130,246,0.12); color:#dbeafe;">
-            <strong>📋 YouTube Video Description (Shown on Webpage — Amazon URL Stripped):</strong><br>${{v.yt_description}}
+            <strong>📋 YouTube Video Description &amp; Specs:</strong><br>${{v.yt_description}}
           </div>
           <div class="verdict-box" style="margin-top:8px;">
-            <strong>🎙️ Spoken 2–3 Min Review Transcript:</strong><br>${{v.transcript_summary}}
+            <strong>🎙️ Spoken 2–3 Min Review Summary:</strong><br>${{v.transcript_summary}}
           </div>
         </div>
         <div>
-          <a class="btn btn-yt" href="${{v.yt_url}}" target="_blank" rel="noopener">▶ Watch 3-Min Video on YouTube →</a>
-          <a class="btn btn-ebay" href="${{ebayUrl}}" target="_blank" rel="noopener">🔍 Compare "${{v.ebay_keyword}}" on eBay →</a>
-          <a class="btn btn-ali" href="${{oneAliLink}}" target="_blank" rel="noopener">🔥 Shop Deal on AliExpress (1-Link) →</a>
+          <a class="btn btn-purple" href="videos/${{v.slug}}.html">🎬 Open Full Single Video Review Page →</a>
+          <a class="btn" style="background:#f59e0b;color:#0f172a;" href="${{amzUrl}}" target="_blank" rel="nofollow sponsored noopener">🛒 Check Today's Price on Amazon →</a>
+          <a class="btn btn-ebay" href="${{ebayUrl}}" target="_blank" rel="nofollow sponsored noopener">🔍 Compare "${{v.ebay_keyword}}" on eBay →</a>
+          <a class="btn btn-ali" href="${{oneAliLink}}" target="_blank" rel="nofollow sponsored noopener">🔥 Shop Deal on AliExpress (1-Link) →</a>
+          <a class="btn btn-yt" href="${{v.yt_url}}" target="_blank" rel="noopener">▶ Watch Video on YouTube →</a>
         </div>
       </div>
     `;
@@ -1002,7 +1115,7 @@ function renderAll() {{
       </div>
       <div>
         <a class="btn btn-yt" href="${{g.trailer_url}}" target="_blank" rel="noopener">▶ Watch Gameplay Trailer</a>
-        <a class="btn btn-green" href="${{g.base_url}}&partner=${{partnerId}}" target="_blank" rel="noopener">Buy Steam Key →</a>
+        <a class="btn btn-green" href="${{g.base_url}}" target="_blank" rel="nofollow sponsored noopener">🎮 Buy Discounted Steam Key on Instant-Gaming →</a>
       </div>
     </div>
   `).join('');
