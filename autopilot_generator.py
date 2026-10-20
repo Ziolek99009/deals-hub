@@ -402,6 +402,10 @@ def clean_title_for_ebay(video_title):
     return " ".join(cleaned.split()[:5]) or "Tech Gadget"
 
 
+def xml_esc(s):
+    return str(s or "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
+
+
 def build_standalone_comparison_files():
     """Creates real standalone HTML files in site_output/compare/*.html for VPNs,
     Hosting, AI Tools, Crypto, Travel, and AliExpress/eBay Bestsellers!"""
@@ -419,10 +423,10 @@ def build_standalone_comparison_files():
         page_url = f"{CONFIG['site_domain']}/compare/{p['slug']}.html"
         sitemap_entries.append(f"  <url><loc>{page_url}</loc></url>")
         rss_entries += f"""    <item>
-      <title>{p['seo_title']}</title>
+      <title>{xml_esc(p['seo_title'])}</title>
       <link>{page_url}</link>
       <guid isPermaLink="true">{page_url}</guid>
-      <description>{p['verdict']}</description>
+      <description>{xml_esc(p['verdict'])}</description>
       <enclosure url="{p['pin_image']}" length="15000" type="image/jpeg" />
     </item>\n"""
 
@@ -515,10 +519,10 @@ def build_top10_category_roundups(enriched_videos):
         best_sitemap.append(f"  <url><loc>{page_url}</loc></url>")
         thumb = f"https://i.ytimg.com/vi/{matched[0]['video_id']}/hqdefault.jpg"
         best_rss += f"""    <item>
-      <title>{cat['title']}</title>
+      <title>{xml_esc(cat['title'])}</title>
       <link>{page_url}</link>
       <guid isPermaLink="true">{page_url}</guid>
-      <description>{cat['intro']}</description>
+      <description>{xml_esc(cat['intro'])}</description>
       <enclosure url="{thumb}" length="15000" type="image/jpeg" />
     </item>\n"""
 
@@ -831,6 +835,7 @@ const COUNTRIES = {countries_json};
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="OEZ1yHMJHa3Afl-ppdvuGMEYvrlnNJpAgwQpShdKLs8" />
+<meta name="p:domain_verify" content="d38735bb19d246673a3244b91e395848"/>
 <title>Standalone Comparison Pages + 20k Video Pages Architecture</title>
 <style>
   :root {{
