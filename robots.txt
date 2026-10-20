@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://global-tech-reviews.github.io/deals-hub/sitemap.xml
