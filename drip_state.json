@@ -1,20 +1,5 @@
 {
-  "day_number": 1,
-  "back_catalog_next_index": 0,
-  "pinterest_old_video_offset": 0,
-  "total_videos_published": 0,
-  "schedule_mode": "4_channel_dual_queue_with_pinterest_vault_rotator",
-  "daily_capacity": {
-    "channels_count": 4,
-    "new_daily_uploads_per_day": 90,
-    "back_catalog_catchup_per_day": 250,
-    "pinterest_feeds_generated": [
-      "feed.xml (Master Feed)",
-      "feed_channel_1.xml (Channel 1 New + Old Rotation)",
-      "feed_channel_2.xml (Channel 2 New + Old Rotation)",
-      "feed_channel_3.xml (Channel 3 New + Old Rotation)",
-      "feed_channel_4.xml (Channel 4 New + Old Rotation)",
-      "feed_backcatalog_vault.xml (40 Old Videos Rotated Daily with Fresh pubDate!)"
-    ]
-  }
+  "day_number": 2,
+  "total_videos_published": 292,
+  "last_updated": "2026-10-20 15:17 UTC"
 }
