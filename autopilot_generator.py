@@ -214,18 +214,26 @@ STANDALONE_COMPARISON_PAGES = [
 
 
 def _clean_summary_text(raw_text, fallback_title):
+    """Clean source summaries without inventing hands-on testing or specifications."""
     if not raw_text:
-        return f"Hands-on video overview of {fallback_title} covering key specifications, sizing, and daily usability."
-    notes = re.sub(r"https?://\S+", "", raw_text)
-    notes = re.sub(r"Product link:\s*🔗?\s*Check it out:\s*", "", notes, flags=re.I)
-    notes = re.sub(r"Link to Buy\s*-\s*", "", notes, flags=re.I)
-    notes = re.sub(r"🔗\s*Check it out:\s*", "", notes, flags=re.I)
-    notes = re.sub(r"Disclosure:.*?(?:cost to you\.|purchases\.|link\.)", "", notes, flags=re.I)
-    notes = re.sub(r"As an Amazon Associate[^\.]*\.", "", notes, flags=re.I)
-    notes = re.sub(r"This helps support the channel at no extra cost to you\.", "", notes, flags=re.I)
-    notes = re.sub(r"#\w+", "", notes)
-    notes = re.sub(r"\s{2,}", " ", notes).strip(" -—•:")
-    return notes[:550] if len(notes) > 30 else f"Hands-on video overview of {fallback_title} covering key specifications, sizing, and daily usability."
+        return f"The available source does not include a detailed summary for {fallback_title}. Check the video and current product listing for details."
+    cleaned = []
+    ignored = ("product link:", "link to buy", "disclosure:", "as an amazon associate", "more product videos", "browse ebay", "browse aliexpress", "factory-direct", "ai disclosure:")
+    for line in str(raw_text).splitlines():
+        line = line.strip()
+        if not line or any(token in line.lower() for token in ignored):
+            continue
+        if re.match(r"^\d{1,2}:\d{2}", line) or line.startswith("#") or line.startswith("---"):
+            continue
+        line = re.sub(r"https?://\S+", "", line)
+        line = re.sub(r"#\w+", "", line)
+        line = re.sub(r"\s+", " ", line).strip(" -—•:*")
+        if len(line) >= 20 and line not in cleaned:
+            cleaned.append(line)
+    notes = " ".join(cleaned)
+    if len(notes) > 550:
+        notes = notes[:547].rsplit(" ", 1)[0] + "..."
+    return notes or f"The available source does not include a detailed summary for {fallback_title}. Check the video and current product listing for details."
 
 
 def _fetch_xml_feed_lookup():
@@ -738,119 +746,34 @@ def ping_indexnow(urls_to_ping):
 
 
 def _build_editorial_sections(v, amz_href, default_ebay):
-    """Builds 450+ additional words of structured, product-specific buying guide,
-    extracted feature highlights, pre-purchase fit checklist, and store comparison
-    table from the video's real description, channel category, and product specs."""
-    title = v.get("title", "Product Review")
-    kw = v.get("ebay_keyword", title)
-    ch = v.get("channel_name", "KitchenGear")
-    dur = v.get("duration", "1:45")
-    raw_desc = v.get("yt_description", "")
-
-    bullets = []
+    """Render source-backed video notes; do not invent tests, specs, or shipping claims."""
+    title = str(v.get("title", "Video overview"))
+    channel = str(v.get("channel_name", "Video channel"))
+    summary = str(v.get("transcript_summary", "")).strip()
+    raw_desc = str(v.get("yt_description", ""))
+    points = []
+    ignored = ("product link", "link to buy", "disclosure", "amazon associate", "more product videos", "browse ebay", "browse aliexpress", "ai disclosure")
     for part in re.split(r"[•\n\r]+|(?:(?<=\.)\s+)", raw_desc):
-        c = re.sub(r"https?://\S+", "", part)
-        c = re.sub(r"(?:Product link|Link to Buy|Check it out|Disclosure|As an Amazon Associate|#\w+)[^.]*", "", c, flags=re.I).strip(" :—-•*")
-        if 28 <= len(c) <= 220 and not c.lower().startswith(("this helps support", "i may earn", "0:00")):
-            if c not in bullets:
-                bullets.append(c)
-        if len(bullets) >= 5:
+        text = part.strip()
+        if any(token in text.lower() for token in ignored):
+            continue
+        text = re.sub(r"https?://\S+", "", text)
+        text = re.sub(r"#\w+", "", text)
+        text = re.sub(r"\s+", " ", text).strip(" :—-•*")
+        if 25 <= len(text) <= 250 and text not in points:
+            points.append(text)
+        if len(points) >= 5:
             break
-
-    if ch == "KitchenGear" or any(w in kw.lower() for w in ["espresso", "coffee", "fryer", "oven", "blender", "mixer", "toaster", "grill", "cooker", "kettle", "knife", "pan", "pot", "ice", "juicer", "kitchen", "dish"]):
-        dept = "Kitchen & Countertop Appliances"
-        fit_checks = [
-            f"<strong>Countertop Footprint &amp; Cabinet Clearance:</strong> Before ordering the {kw}, measure both your available counter depth and the vertical clearance beneath upper kitchen cabinets—especially if the unit has a top-loading water tank, hinged lid, or tall hopper.",
-            f"<strong>Daily Cleaning &amp; Removable Parts:</strong> In daily kitchen use, convenience comes down to how quickly drip trays, filters, carafes, or baskets rinse clean by hand vs. top-rack dishwasher placement.",
-            f"<strong>Heat-Up Consistency &amp; Ergonomics:</strong> The {dur} video overview highlights real-world ergonomics, controls, and build materials so you can judge whether {kw} matches your morning routine and household capacity."
-        ]
-    elif ch == "Bedroom Comfort" or any(w in kw.lower() for w in ["mattress", "pillow", "sheet", "duvet", "comforter", "bed", "blanket", "sleep", "quilt", "topper", "curtain", "frame"]):
-        dept = "Bedroom, Sleep & Home Textiles"
-        fit_checks = [
-            f"<strong>Sizing, Pocket Depth &amp; Bed Frame Fit:</strong> Confirm your exact mattress dimensions (Twin, Full, Queen, King, or Cal King) and mattress thickness before selecting {kw} so corner straps, skirts, or frames fit without slipping.",
-            f"<strong>Fabric Breathability &amp; Wash Care:</strong> Check the care label guidelines for cold-water machine washing and low-heat tumble drying to preserve loft, stitching, and softness over repeated laundry cycles.",
-            f"<strong>All-Season Thermal Balance:</strong> As shown in our {dur} video walkthrough on {ch}, material density and weave texture determine whether {kw} suits warm sleepers, cool bedrooms, or year-round guest rooms."
-        ]
-    elif ch == "Simple Home Reviews" or any(w in kw.lower() for w in ["vacuum", "shelf", "organizer", "chair", "desk", "lamp", "light", "storage", "fan", "heater", "purifier", "humidifier", "mop", "clean", "sofa", "table", "rug", "mirror"]):
-        dept = "Home Organization, Furniture & Living Essentials"
-        fit_checks = [
-            f"<strong>Room Placement &amp; Assembly Hardware:</strong> Measure doorway width and target floor or wall space for {kw}, and verify whether mounting brackets, leveling feet, or tool-free connectors are included in the box.",
-            f"<strong>Material Durability &amp; Weight Capacity:</strong> Pay close attention to frame finish, joint stability, and load rating—key areas inspected during our {dur} {ch} video walkthrough.",
-            f"<strong>Maintenance &amp; Replacement Consumables:</strong> If {kw} uses filters, pads, bulbs, or rechargeable packs, checking multi-pack availability across Amazon and eBay helps keep long-term ownership costs low."
-        ]
-    else:
-        dept = "Everyday Tech, Home & Lifestyle Gear"
-        fit_checks = [
-            f"<strong>Compatibility &amp; Power Requirements:</strong> Verify connector types, voltage/adapter specs, and device dimensions for {kw} prior to checkout so it integrates cleanly with your existing setup.",
-            f"<strong>Build Quality &amp; Everyday Ergonomics:</strong> Our {dur} video review on {ch} walks through physical controls, finish quality, and practical day-to-day handling.",
-            f"<strong>Warranty Support &amp; Return Window:</strong> Ordering through verified listings on Amazon or top-rated regional eBay sellers ensures buyer-protection coverage and straightforward returns."
-        ]
-
-    while len(bullets) < 4:
-        defaults = [
-            f"Focused {dur} video inspection of {kw} recorded for the {ch} channel ({dept}).",
-            f"Direct visual check of exterior build quality, user controls, included accessories, and real-world proportions.",
-            f"Side-by-side price and stock comparison across Amazon ({CONFIG['amazon_tag']}), 14 regional eBay marketplaces, and AliExpress.",
-            f"Practical buyer checklist covering sizing, daily maintenance, and long-term durability before you buy."
-        ]
-        for d in defaults:
-            if d not in bullets and len(bullets) < 4:
-                bullets.append(d)
-
-    bullets_html = "".join(f"<li style='margin-bottom:7px;'>{b}</li>" for b in bullets)
-    checks_html = "".join(f"<li style='margin-bottom:9px;'>{c}</li>" for c in fit_checks)
-
+    summary_html = f"<p>{xml_esc(summary)}</p>" if summary else ""
+    points_html = ("<ul>" + "".join(f"<li>{xml_esc(x)}</li>" for x in points) + "</ul>") if points else "<p>The available description contains no specific product details. Watch the source video and verify specifications on the seller’s current listing.</p>"
     return f"""
-    <div style="background:#0b1120;border:1px solid #334155;border-radius:10px;padding:18px;margin:16px 0;font-size:14px;color:#e2e8f0;">
-      <div style="font-size:11.5px;color:#38bdf8;font-weight:800;text-transform:uppercase;letter-spacing:0.5px;">🔍 Detailed Product Breakdown • {dept} ({ch})</div>
-      <h2 style="font-size:18px;margin:6px 0 10px;color:#f8fafc;">Key Features &amp; Video Highlights for {kw}</h2>
-      <p style="margin:0 0 10px;color:#cbd5e1;">In this {dur} video review from <strong>{ch}</strong>, we examine how <strong>{title}</strong> performs in everyday use, focusing on build materials, ease of setup, and value for money compared with similarly priced options in the {dept.lower()} category.</p>
-      <ul style="margin:8px 0 0 18px;color:#dbeafe;">
-        {bullets_html}
-      </ul>
-    </div>
-
-    <div style="background:#0b1120;border:1px solid #1e293b;border-radius:10px;padding:18px;margin:16px 0;font-size:14px;color:#e2e8f0;">
-      <h2 style="font-size:17.5px;margin:0 0 10px;color:#34d399;">✅ Pre-Purchase Sizing, Fit &amp; Ownership Checklist</h2>
-      <p style="margin:0 0 10px;color:#cbd5e1;">Before purchasing <strong>{kw}</strong>, review these three practical checkpoints to make sure the model matches your space and daily routine:</p>
-      <ul style="margin:6px 0 0 18px;color:#cbd5e1;">
-        {checks_html}
-      </ul>
-    </div>
-
-    <div style="background:#0b1120;border:1px solid #334155;border-radius:10px;padding:18px;margin:16px 0;font-size:13.5px;color:#e2e8f0;overflow-x:auto;">
-      <h2 style="font-size:17px;margin:0 0 10px;color:#fbbf24;">📊 Where to Buy {kw} — Multi-Store Deal Comparison</h2>
-      <table style="width:100%;border-collapse:collapse;font-size:13px;">
-        <thead>
-          <tr style="border-bottom:1px solid #334155;color:#94a3b8;text-align:left;">
-            <th style="padding:8px;">Marketplace</th>
-            <th style="padding:8px;">Best For</th>
-            <th style="padding:8px;">Shipping &amp; Buyer Protection</th>
-            <th style="padding:8px;">Direct Link</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="border-bottom:1px solid #1e293b;">
-            <td style="padding:8px;font-weight:700;color:#fbbf24;">Amazon</td>
-            <td style="padding:8px;">Exact product listing from the YouTube video description &amp; verified customer Q&amp;A</td>
-            <td style="padding:8px;">Fast Prime-eligible delivery &amp; standard 30-day return window</td>
-            <td style="padding:8px;"><a href="{amz_href}" target="_blank" rel="nofollow sponsored noopener" style="color:#fbbf24;font-weight:700;">View on Amazon →</a></td>
-          </tr>
-          <tr style="border-bottom:1px solid #1e293b;">
-            <td style="padding:8px;font-weight:700;color:#60a5fa;">eBay (14 Countries)</td>
-            <td style="padding:8px;">New, open-box, and refurbished deals routed automatically to your local currency</td>
-            <td style="padding:8px;">eBay Money Back Guarantee across US, UK, DE, PL, FR, IT, ES, AU &amp; CA</td>
-            <td style="padding:8px;"><a href="{default_ebay}" target="_blank" rel="nofollow sponsored noopener" style="color:#60a5fa;font-weight:700;">Compare eBay Listings →</a></td>
-          </tr>
-          <tr>
-            <td style="padding:8px;font-weight:700;color:#fb923c;">AliExpress</td>
-            <td style="padding:8px;">Factory-direct accessories, replacement parts, and budget alternative models</td>
-            <td style="padding:8px;">Global Choice shipping with buyer protection tracking</td>
-            <td style="padding:8px;"><a href="{CONFIG['one_aliexpress_link']}" target="_blank" rel="nofollow sponsored noopener" style="color:#fb923c;font-weight:700;">Check AliExpress →</a></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>"""
+    <section style="background:#0b1120;border:1px solid #334155;border-radius:10px;padding:18px;margin:16px 0;font-size:14px;color:#e2e8f0;">
+      <h2 style="font-size:18px;margin:0 0 10px;color:#f8fafc;">Video notes: {xml_esc(title)}</h2>
+      <p style="color:#cbd5e1;">Source: the {xml_esc(channel)} video and its published description. These notes do not claim independent hands-on testing.</p>
+      {summary_html}
+      {points_html}
+      <p><a href="{amz_href}" rel="nofollow sponsored noopener">Check the related Amazon listing</a></p>
+    </section>"""
 
 
 def build_site():
@@ -936,7 +859,6 @@ def build_site():
                 "name": v["title"],
                 "description": v.get("transcript_summary", v["title"]),
                 "thumbnailUrl": [thumb_url],
-                "uploadDate": "2026-10-15T08:00:00+00:00",
                 "embedUrl": f"https://www.youtube.com/embed/{v['video_id']}"
             },
             {
@@ -944,52 +866,39 @@ def build_site():
                 "@type": "BreadcrumbList",
                 "itemListElement": [
                     {"@type": "ListItem", "position": 1, "name": "Deal Hub", "item": f"{CONFIG['site_domain']}/"},
-                    {"@type": "ListItem", "position": 2, "name": v.get("channel_name", "KitchenGear"), "item": f"{CONFIG['site_domain']}/best/{best_categories[0]['slug']}.html"},
+                    {"@type": "ListItem", "position": 2, "name": v.get("channel_name", "KitchenGear"), "item": f"{CONFIG['site_domain']}/"},
                     {"@type": "ListItem", "position": 3, "name": v["title"], "item": canonical_url}
                 ]
             },
-            {
-                "@context": "https://schema.org",
-                "@type": "FAQPage",
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": f"What does the {v.get('duration', '2:00')} video review of {v['ebay_keyword']} cover?",
-                        "acceptedAnswer": {"@type": "Answer", "text": f"The {v.get('channel_name', 'KitchenGear')} video walkthrough inspects build materials, physical sizing, controls, and everyday usability for {v['ebay_keyword']}."}
-                    },
-                    {
-                        "@type": "Question",
-                        "name": f"Where can I compare prices for {v['ebay_keyword']} worldwide?",
-                        "acceptedAnswer": {"@type": "Answer", "text": f"You can compare current deals for {v['ebay_keyword']} across Amazon ({CONFIG['amazon_tag']}), 14 local eBay marketplaces, and AliExpress using the comparison buttons and table on this page."}
-                    }
-                ]
-            }
+
         ])
 
         # Ring-based Internal Linking: Every video page links to the next 6 distinct videos so 0% of pages are ever orphans!
         ring_neighbors = [
-            enriched_videos[(v_idx + offset) % total_vids]
-            for offset in range(1, min(7, total_vids))
-        ]
+            rv for rv in enriched_videos
+            if rv.get("channel_id") == v.get("channel_id") and rv.get("video_id") != v.get("video_id")
+        ][:6]
         related_links_html = "".join([
             f"<li style='margin-bottom:6px;'><a href='{rv['slug']}.html' style='color:#93c5fd;text-decoration:none;'>🎬 {rv['title']} ({rv['duration']})</a></li>"
             for rv in ring_neighbors
         ])
-        top10_links_html = "".join([
-            f"<li style='margin-bottom:6px;'><a href='../best/{bc['slug']}.html' style='color:#34d399;text-decoration:none;'>🏆 {bc['title']}</a></li>"
-            for bc in best_categories
-        ])
+        top10_links_html = ""
         amz_href = v.get("amazon_url") or ("https://www.amazon.com/s?k=" + q + "&tag=" + CONFIG["amazon_tag"])
         amz_btn_html = (
             f'<a class="btn" style="background:#f59e0b;color:#0f172a;" href="{amz_href}" target="_blank" rel="nofollow sponsored noopener">'
             "🛒 Check Today's Price &amp; Reviews on Amazon (From Video Description) →</a>"
             if CONFIG.get("enable_amazon") else ""
         )
-        desc_with_link = re.sub(
-            r"(https?://\S+)",
-            r'<a href="\1" target="_blank" rel="nofollow sponsored noopener" style="color:#fbbf24;font-weight:800;text-decoration:underline;">\1</a>',
-            v.get("yt_description", ""),
-        )
+        desc_lines = []
+        for line in str(v.get("yt_description", "")).splitlines():
+            line = line.strip()
+            if not line or any(token in line.lower() for token in ("product link:", "disclosure:", "as an amazon associate", "more product videos", "browse ebay", "browse aliexpress", "ai disclosure:")):
+                continue
+            line = re.sub(r"https?://\S+", "", line)
+            line = re.sub(r"\s+", " ", line).strip(" :—-•")
+            if line and line not in desc_lines:
+                desc_lines.append(line)
+        desc_with_link = "<br>".join(xml_esc(line) for line in desc_lines[:8]) or "See the source video for its published description."
         editorial_html = _build_editorial_sections(v, amz_href, default_ebay)
         seo_page_title = f"{v['title']} — 2026 Video Overview, Specs & Price Comparison"
         meta_desc_clean = xml_esc(v.get("transcript_summary", "")[:155])
@@ -1031,10 +940,10 @@ def build_site():
   <div class="box">
     <nav style="font-size:12.5px;color:#94a3b8;margin-bottom:8px;">
       <a href="../index.html" style="color:#93c5fd;text-decoration:none;">Deal Hub</a> &rsaquo;
-      <a href="../best/{best_categories[0]['slug']}.html" style="color:#93c5fd;text-decoration:none;">{v.get('channel_name', 'KitchenGear')}</a> &rsaquo;
+      <a href="../index.html" style="color:#93c5fd;text-decoration:none;">{v.get('channel_name', 'KitchenGear')}</a> &rsaquo;
       <span>{v['title']}</span>
     </nav>
-    <div style="font-size:12px;color:#38bdf8;font-weight:800;margin-top:8px;">📺 {v.get('channel_name', 'KitchenGear').upper()} • {v.get('duration', '2:00')} HANDS-ON PRODUCT WALKTHROUGH</div>
+    <div style="font-size:12px;color:#38bdf8;font-weight:800;margin-top:8px;">📺 {v.get('channel_name', 'KitchenGear').upper()} • {v.get('duration', '2:00')} VIDEO OVERVIEW</div>
     <h1 style="font-size:23px; margin:8px 0 10px;">{v['title']}</h1>
     <div style="position:relative; padding-bottom:56.25%; height:0; border-radius:10px; overflow:hidden; margin:14px 0;">
       <iframe src="https://www.youtube.com/embed/{v['video_id']}" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allowfullscreen></iframe>
@@ -1062,10 +971,8 @@ def build_site():
     {editorial_html}
 
     <div class="faq-box">
-      <strong style="color:#c4b5fd;">❓ Frequently Asked Questions — {v['ebay_keyword']}:</strong>
-      <p style="margin-top:8px;"><strong>Q: Where is the direct Amazon product link from the {v.get('channel_name', 'KitchenGear')} video?</strong><br>A: The exact product link from the YouTube description (<a href="{amz_href}" target="_blank" rel="nofollow sponsored noopener" style="color:#fbbf24;">open on Amazon</a>) is linked in the blue description box and gold button above.</p>
-      <p style="margin-top:8px;"><strong>Q: Can I compare {v['ebay_keyword']} prices in my local currency?</strong><br>A: Yes. The blue eBay button automatically detects your browser region across 14 local eBay marketplaces (US, UK, Germany, Poland, France, Italy, Spain, Australia, Canada, Netherlands, Belgium, Austria, Switzerland, and Ireland) to show local stock and shipping.</p>
-      <p style="margin-top:8px;"><strong>Q: What should I check before ordering {v['ebay_keyword']}?</strong><br>A: Review the dimensions, power/sizing compatibility, and included accessories in the Pre-Purchase Checklist above, and watch the embedded {v.get('duration', '2:00')} video walkthrough for a close-up look at the build quality.</p>
+      <strong style="color:#c4b5fd;">About this page</strong>
+      <p>This page links to the source video and related product listing. Verify current specifications, compatibility, price, and availability on the seller’s listing before buying.</p>
     </div>
 
     <div style="background:#0b1120;border:1px solid #2a364f;border-radius:10px;padding:14px;margin-top:16px;font-size:13.5px;">
@@ -1553,6 +1460,9 @@ const COUNTRIES = {countries_json};
         Browse our latest 2-to-3 minute product overview videos, key feature checklists, and direct links to check current availability on Amazon, your local eBay marketplace (14 countries), and AliExpress.
       </p>
     </div>
+    <label for="videoSearch" style="display:block;margin:18px 0 6px;color:#e2e8f0;font-weight:700;">Search videos by product or topic</label>
+    <input id="videoSearch" type="search" placeholder="Try: kitchen knife, storage jar, bedding…" oninput="renderAll()" style="box-sizing:border-box;width:100%;max-width:720px;padding:13px 16px;border-radius:10px;border:1px solid #475569;background:#111827;color:#f8fafc;font-size:16px;">
+    <p id="videoCount" aria-live="polite" style="color:#94a3b8;font-size:13px;"></p>
     <div class="standalone-grid" id="videoGrid"></div>
   </div>
 
@@ -1624,14 +1534,14 @@ function renderAll() {{
     `;
   }}).join('');
 
-  document.getElementById('videoGrid').innerHTML = VIDEOS.map(v => {{
+  const searchTerm = (document.getElementById('videoSearch')?.value || '').trim().toLowerCase();
+  const filteredVideos = VIDEOS.filter(v => `${{v.title || ''}} ${{v.channel_name || ''}} ${{v.ebay_keyword || ''}} ${{v.transcript_summary || ''}}`.toLowerCase().includes(searchTerm));
+  document.getElementById('videoCount').textContent = `Showing ${{filteredVideos.length.toLocaleString()}} of ${{VIDEOS.length.toLocaleString()}} videos`;
+  document.getElementById('videoGrid').innerHTML = filteredVideos.map(v => {{
     const q = encodeURIComponent(v.ebay_keyword);
     const ebayUrl = `https://www.ebay.com/sch/i.html?_nkw=${{q}}&mkcid=1&mkrid=711-53200-19255-0&campid=${{ebayCampId}}&toolid=10001`;
     const amzUrl = v.amazon_url || `https://www.amazon.com/s?k=${{q}}&tag={CONFIG["amazon_tag"]}`;
-    const descHtml = (v.yt_description || '').replace(
-      /(https?:\/\/\S+)/g,
-      '<a href="$1" target="_blank" rel="nofollow sponsored noopener" style="color:#fbbf24;font-weight:800;text-decoration:underline;">$1</a>'
-    );
+    const descHtml = (v.transcript_summary || 'Open the video for details.').replace(/https?:\/\/\S+/g, '').trim();
     return `
       <div class="card">
         <div>
@@ -1641,10 +1551,7 @@ function renderAll() {{
           </div>
           <h3><a href="videos/${{v.slug}}.html" style="color:#f8fafc;text-decoration:none;">${{v.title}}</a></h3>
           <div class="verdict-box" style="margin-top:8px; border-left-color:#3b82f6; background:rgba(59,130,246,0.12); color:#dbeafe;">
-            <strong>📋 YouTube Video Description &amp; Direct Amazon Product Link:</strong><br>${{descHtml}}
-          </div>
-          <div class="verdict-box" style="margin-top:8px;">
-            <strong>🎙️ Spoken 2–3 Min Review Summary:</strong><br>${{v.transcript_summary}}
+            <strong>Video summary:</strong><br>${{descHtml}}
           </div>
         </div>
         <div>
